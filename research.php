@@ -29,8 +29,6 @@
   <body class="home">
 		<?php 
       include 'php/nav.php'; 
-      include 'php/titlescreen.php';
-      include 'php/row_headings.php';
     ?>
 
 		<h1>TEXT</h1>

@@ -1,0 +1,14 @@
+.navbar{
+	float: none;
+  	vertical-align: top;
+  	text-align: center;
+	color: red;
+    background-color: #FFFFFF;
+}
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:30px !important; padding-bottom:0 !important;
+    height: 80px;
+    text-align: center;
+}
+.navbar {min-height:30px !important;}

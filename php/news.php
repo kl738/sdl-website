@@ -26,22 +26,22 @@
 		          		<div class="carousel-caption">
 		            		<h1 class="super-heading">Event 2 </h1>
 		            		<p class="super-paragraph">Caption</p>
-		          	</div>
+		          		</div>
 		        </div>
 		        <div style="background-image: url('img/carousel3.jpg');" class="item">
 		          	<div class="overlay"></div>
 		          		<div class="carousel-caption">
 		           			<h1 class="super-heading">Event 3</h1>
 		            		<p>Caption</p>
-		          	</div>
+		          		</div>
 		        </div>
 		    </div>
 		    <!--Left Right Arrows-->
-		    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		    <a class="left carousel-control" href="#carousel-home" data-slide="prev">
 			    <span class="glyphicon glyphicon-chevron-left"></span>
 			    <span class="sr-only">Previous</span>
 			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			<a class="right carousel-control" href="#carousel-home" data-slide="next">
 			    <span class="glyphicon glyphicon-chevron-right"></span>
 			    <span class="sr-only">Next</span>
 			</a>

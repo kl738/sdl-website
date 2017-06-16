@@ -141,6 +141,10 @@ section {
   padding-top: 90px;
   padding-bottom: 90px;
 }
+section.section--padding-small {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 section.section--no-padding {
   padding-top: 0;
   padding-bottom: 0;
@@ -1630,10 +1634,10 @@ a:focus {
   border-radius: 0;
 }
 hr {
-  margin-top: 23px;
-  margin-bottom: 23px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 2px solid #2b90d9;
 }
 /* breadcrumbs */
 .breadcrumb {
@@ -2117,4 +2121,7 @@ a.list-group-item.active > .badge,
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
+}
+.title{
+  border-top: solid 2px #2b90d9 ;
 }

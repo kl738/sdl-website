@@ -54,7 +54,47 @@
         <section class="section--padding-small">
             <div class="container">
                 <h2>Current Projects</h2>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/uris.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>Complex Social Contagion</h3>
+                        <p>2014-Present Supported By: Minerva</p>
+                        <p>By examining the digital traces of social contagion during times of civil unrest we aim to better understand how facts and ideas penetrate social networks and improve models of social contagion.</p>
+                    </div>
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/EnglandNormInversePaletteCrop.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>Cross-cultural differences in communication networks</h3>
+                        <p>2012-Present Supported By: NSF</p>
+                        <p>Using Twitter data, this project aims to compare the topology of communication networks by cultural and economic factors at the country level.</p>
+                    </div>
+                </div>
                 <h2>Past Projects</h2>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>[Project Name]</h3>
+                        <p>[Year Started-Year Ended] [Supported By: ]</p>
+                        <p>[Description]</p>
+                    </div>
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>[Project Name]</h3>
+                        <p>[Year Started-Year Ended] [Supported By: ]</p>
+                        <p>[Description]</p>
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -32,7 +32,60 @@
             include 'php/nav.php';
             include 'php/title.php'; 
         ?>
-
+        <section id="papers" class="section--no-padding background-white ">
+            <div class="container">
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>[Title of Paper]</h3>
+                        <p>AUTHORS: [Insert Authors Here]</p>
+                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                    </div>
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>[Title of Paper]</h3>
+                        <p>AUTHORS: [Insert Authors Here]</p>
+                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                    </div>
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/blog1.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>[Title of Paper]</h3>
+                        <p>AUTHORS: [Insert Authors Here]</p>
+                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                    </div>
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/blog2.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>[Title of Paper]</h3>
+                        <p>AUTHORS: [Insert Authors Here]</p>
+                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                    </div>
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="img/blog4.jpg" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>[Title of Paper]</h3>
+                        <p>AUTHORS: [Insert Authors Here]</p>
+                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 

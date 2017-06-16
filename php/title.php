@@ -1,5 +1,5 @@
 <section class="section--padding-small title" >
-    <div class="container">
+    <div class="container bottom-line">
 	    <h1>
 	    	<?php if ($activePage =="home") {?>Home<?php } ?>
 	    	<?php if ($activePage =="research") {?>Research<?php } ?>

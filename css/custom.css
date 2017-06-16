@@ -1,1 +1,7 @@
 /* your styles go here */
+.bottom-line{
+	border-bottom: 2px gray solid;
+}
+.row-buffer{
+	margin-bottom: 10px;
+}

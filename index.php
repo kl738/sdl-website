@@ -25,6 +25,7 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
   </head>
   <body>
 		<?php 
@@ -33,11 +34,13 @@
       include 'php/titlescreen.php';
       include 'php/about.php';
       include 'php/row_headings.php';
-      include 'php/news.php'; //todo
+      include 'php/news.php'; 
+      include 'php/footer.php';
     ?>
-
-
-		
-    <?php include 'php/footer.php'; ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/front.js"></script>
 	</body>
 </html>

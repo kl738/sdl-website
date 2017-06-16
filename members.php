@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                     <div class="col-sm-2">
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                     <div class="col-sm-2">
@@ -68,7 +68,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                     <div class="col-sm-2">
@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                     <div class="col-sm-2">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="col-sm-4">
                         <h3>[Name]</h3>
-                        <p>[Role/Position]</p>
+                        <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
                 </div>

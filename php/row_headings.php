@@ -18,8 +18,8 @@
           	</div>
 	          <div class="col-sm-4">
 	            <div class="post">
-	            	<h3><a href="people.php">People</a></h3>
-	              	<div class="image"><a href="people.php"><img src="img/blog3.jpg" alt="" class="img-responsive img-thumbnail"></a></div>
+	            	<h3><a href="members.php">People</a></h3>
+	              	<div class="image"><a href="members.php"><img src="img/blog3.jpg" alt="" class="img-responsive img-thumbnail"></a></div>
 	              	<p>Lab Members</p>
 	 			</div>
 	          </div>

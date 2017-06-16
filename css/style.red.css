@@ -1638,7 +1638,7 @@ a:focus {
   border-radius: 0;
 }
 hr {
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 0px;
   border: 0;
   border-top: 2px solid red;

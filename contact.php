@@ -32,7 +32,30 @@
             include 'php/nav.php';
             include 'php/title.php'; 
         ?>
+        <div class="container">
+            <p class="lead">The lab is located in Uris Hall in Central Campus of Cornell University.</p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Lab Director</h2>
+                    <p class="lead">Michael Macy</p>
+                    <p><b>Email: </b>mwm14@cornell.edu</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Lab Manager</h2>
+                    <p class="lead">Chris Cameron</p>
+                    <p><b>Email: </b>cjc73@cornell.edu</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Lab Address</h2>
+                    <p class="lead">Uris 372
+                    Cornell University
+                    Ithaca, NY 14853</p>
+                    <p><b>Phone: </b>607-255-4555</p>
+                </div>
+            </div>
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=uris%20hall&key=AIzaSyAzzPyNkaXsF8mod_eaZuQouHyarGGSV2k" allowfullscreen></iframe>
 
+        </div>
 
 
 

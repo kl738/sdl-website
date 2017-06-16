@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Blog Post</title>
+        <title>Lab Members</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
@@ -28,25 +28,12 @@
     </head>
     <body>
         <?php 
-            $activePage = "research";
-            include 'php/nav.php'; 
+            $activePage = "members";
+            include 'php/nav.php';
             include 'php/title.php';
+
         ?>
-        <section class="section--no-padding">
-            <div class="container">
-                <p class="lead">We study the interplay between network topology and the dynamics of social interaction, using computational models, data from on-line networks, and laboratory experiments with human participants.
-                </p>
-
-                <p class="lead">We are supported by grants from the National Science Foundation and the MINERVA Initiative.</p>
-
-                <p class="lead">The SDL Director is Michael Macy, Goldwin Smith Professor of Arts and Sciences at Cornell University, with a joint appointment in the Department of Sociology and the Department of Information Science.</p>
-
-                <p class="lead">The Assistant Director is Chris Cameron, a PhD candidate at Cornell.</p>
-            </div>
-        </section>
-
-
-
+   
 
 
 

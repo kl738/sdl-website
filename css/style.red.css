@@ -24,6 +24,7 @@ NAVBAR
   border-left: none;
   border-right: none;
 }
+
 .navbar a.navbar-brand {
   font-weight: bold;
   letter-spacing: 0.2em;
@@ -140,6 +141,10 @@ section {
   position: relative;
   padding-top: 90px;
   padding-bottom: 90px;
+}
+section.section--padding-small {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 section.section--no-padding {
   padding-top: 0;
@@ -1133,6 +1138,9 @@ FOOTER AND COPYRIGHT
 =====================
 
 */
+.footer{
+  border-top: solid 2px red;
+}
 .footer__block {
   background: #ccc;
   padding: 80px 0;
@@ -1630,10 +1638,10 @@ a:focus {
   border-radius: 0;
 }
 hr {
-  margin-top: 23px;
-  margin-bottom: 23px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 2px solid red;
 }
 /* breadcrumbs */
 .breadcrumb {
@@ -2117,4 +2125,7 @@ a.list-group-item.active > .badge,
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
+}
+.title{
+  border-top: solid 2px red ;
 }

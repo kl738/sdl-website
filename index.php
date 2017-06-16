@@ -28,16 +28,16 @@
   </head>
   <body class="home">
 		<?php 
+      $activePage = "home";
       include 'php/nav.php'; 
       include 'php/titlescreen.php';
+      include 'php/about.php';
       include 'php/row_headings.php';
+      include 'php/news.php'; //todo
     ?>
-
-		<h1>TEXT</h1>
-
 
 
 		
-		<?php include 'php/footer.php'; ?>
+
 	</body>
 </html>

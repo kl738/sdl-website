@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header <?php if ($activePage =="home") { ?> home" <?php } ?>">
   <div role="navigation" class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header"><a href="index.php" class="navbar-brand">SDL</a>

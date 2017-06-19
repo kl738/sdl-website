@@ -16,21 +16,21 @@
 		    <div role="listbox" class="carousel-inner">
 		        <div style="background-image: url('img/carousel1.jpg');" class="item active">
 		          	<div class="overlay"></div>
-		          		<div class="carousel-caption">
+		          		<div class="carousel-caption" id="news">
 		            		<h1 class="super-heading">Event 1 </h1>
 		            		<p class="super-paragraph">Caption</p>
 		          		</div>
 		        </div>
 		        <div style="background-image: url('img/carousel2.jpg');" class="item">
 		          	<div class="overlay"></div>
-		          		<div class="carousel-caption">
+		          		<div class="carousel-caption" id="news">
 		            		<h1 class="super-heading">Event 2 </h1>
 		            		<p class="super-paragraph">Caption</p>
 		          		</div>
 		        </div>
 		        <div style="background-image: url('img/carousel3.jpg');" class="item">
 		          	<div class="overlay"></div>
-		          		<div class="carousel-caption">
+		          		<div class="carousel-caption" id="news">
 		           			<h1 class="super-heading">Event 3</h1>
 		            		<p>Caption</p>
 		          		</div>

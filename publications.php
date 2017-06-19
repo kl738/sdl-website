@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog3.jpg" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Title of Paper]</h3>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog3.jpg" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Title of Paper]</h3>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog1.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog1.jpg" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Title of Paper]</h3>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog2.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog2.jpg" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Title of Paper]</h3>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog3.jpg" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Title of Paper]</h3>

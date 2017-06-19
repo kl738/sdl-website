@@ -5,3 +5,8 @@
 .row-buffer{
 	margin-bottom: 10px;
 }
+
+.img-publication{
+	border-radius: 12px;
+	max-height: 140px;
+}

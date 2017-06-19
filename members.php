@@ -36,7 +36,7 @@
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
                 <h2>Current Members</h2>
-                <div class="row row-buffer">
+                <div class="row row-buffer text-center">
                     <div class="col-sm-2">
                         <img src="img/blog3.jpg" alt="" class="img-responsive">
                     </div>
@@ -45,70 +45,11 @@
                         <p>[NetID-Role/Position]</p>
                         <p>[Blurb] <a href="#">Links</a></p>
                     </div>
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
-                    </div>
+                    
                 </div>
-                <div class="row row-buffer">
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
-                    </div>
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
-                    </div>
-                </div>
+                <div>
                 <h2>Past Members</h2>
-                <div class="row row-buffer">
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
-                    </div>
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
-                    </div>
-                </div>
-                <div class="row row-buffer">
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
-                    </div>
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
-                    </div>
-                </div>
+                
             </div>
         </section>
 

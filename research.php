@@ -56,7 +56,7 @@
                 <h2>Current Projects</h2>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/uris.jpg" alt="" class="img-thumbnail">
+                        <img src="img/uris.jpg" alt="" class="img-thumbnail img-project">
                     </div>
                     <div class="col-sm-9">
                         <h3>Complex Social Contagion</h3>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/EnglandNormInversePaletteCrop.jpg" alt="" class="img-thumbnail">
+                        <img src="img/EnglandNormInversePaletteCrop.jpg" alt="" class="img-thumbnail img-project">
                     </div>
                     <div class="col-sm-9">
                         <h3>Cross-cultural differences in communication networks</h3>
@@ -77,7 +77,7 @@
                 <h2>Past Projects</h2>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-project">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Project Name]</h3>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-project">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Project Name]</h3>

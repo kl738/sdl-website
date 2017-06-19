@@ -31,14 +31,10 @@
             $activePage = "events";
             include 'php/nav.php';
             include 'php/title.php'; 
+            include 'php/news.php';
+            include 'php/footer.php';
         ?>
-        <div class="container">
-            <h1>Events</h1>
-        </div>
-
-
-
-
-        <?php include 'php/footer.php'; ?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@
 </section>
 <section class="background-white">
 	<div class="container">
-		<div id="carousel-home" data-ride="carousel" class="carousel slide carousel-fullscreen carousel-fade" data-interval="3000">
+		<div id="carousel-home" data-ride="carousel" class="carousel slide carousel-fullscreen carousel-fade" data-interval="3000" data-pause="false">
 	      	<!-- Indicators-->
 	      	<!-- <ol class="carousel-indicators">
 	        	<li data-target="#carousel-home" data-slide-to="0" class="active"></li>

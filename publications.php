@@ -76,7 +76,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog4.jpg" alt="" class="img-thumbnail">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail">
                     </div>
                     <div class="col-sm-9">
                         <h3>[Title of Paper]</h3>

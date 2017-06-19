@@ -923,7 +923,7 @@ p.social.social--big i {
 }
 /* carousel fullscreen - vertically centered caption*/
 .carousel-fullscreen .carousel-caption {
-  top: 50%;
+  top: 80%;
   bottom: auto;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);

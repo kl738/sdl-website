@@ -38,7 +38,7 @@
                 <h2>Current Members</h2>
                 <div class="row row-buffer">
                     <div class="col-sm-4">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">[Name]</h3>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-4">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">[Name]</h3>
@@ -63,7 +63,7 @@
                 <h2>Past Members</h2>
                 <div class="row row-buffer">
                     <div class="col-sm-4">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">[Name]</h3>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-4">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">[Name]</h3>

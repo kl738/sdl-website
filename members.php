@@ -36,20 +36,55 @@
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
                 <h2>Current Members</h2>
-                <div class="row row-buffer text-center">
-                    <div class="col-sm-2">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive">
-                    </div>
+                <div class="row row-buffer">
                     <div class="col-sm-4">
-                        <h3>[Name]</h3>
-                        <p>[NetID-Role/Position]</p>
-                        <p>[Blurb] <a href="#">Links</a></p>
+                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="text-center">[Name]</h3>
+                        <p>[Bio]</p>
+                        <p>[Research Interests] </p>
+                        <p><a href="#">Links</a></p>
                     </div>
                     
                 </div>
-                <div>
+                <div class="row row-buffer">
+                    <div class="col-sm-4">
+                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="text-center">[Name]</h3>
+                        <p>[Bio]</p>
+                        <p>[Research Interests] </p>
+                        <p><a href="#">Links</a></p>
+                    </div>
+                    
+                </div>
                 <h2>Past Members</h2>
-                
+                <div class="row row-buffer">
+                    <div class="col-sm-4">
+                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="text-center">[Name]</h3>
+                        <p>[Bio]</p>
+                        <p>[Research Interests] </p>
+                        <p><a href="#">Links</a></p>
+                    </div>
+                    
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-4">
+                        <img src="img/blog3.jpg" alt="" class="img-responsive img-member">
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="text-center">[Name]</h3>
+                        <p>[Bio]</p>
+                        <p>[Research Interests] </p>
+                        <p><a href="#">Links</a></p>
+                    </div>
+                    
+                </div>
             </div>
         </section>
 

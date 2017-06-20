@@ -7,6 +7,7 @@
 			<?php if ($activePage =="members") {?>Lab Members<?php } ?>
 			<?php if ($activePage =="events") {?>Events<?php } ?>
 			<?php if ($activePage =="contact") {?>Contact<?php } ?>
+			<?php if ($activePage =="login") {?>Login<?php } ?>
 	    </h1>
     </div>
 </section>

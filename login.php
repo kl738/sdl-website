@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Contact</title>
+        <title>Research</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
@@ -31,13 +31,39 @@
         <?php 
             require_once 'php/config.php'; 
             $mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
-            $activePage = "events";
-            include 'php/nav.php';
-            include 'php/title.php'; 
-            include 'php/news.php';
+            $activePage = "login";
+            include 'php/nav.php'; 
+            include 'php/title.php';
+            
+        ?>
+        <div class="container">
+            <form action="#contact_section" method="post">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input id="username" type="text" name="username" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" type="text" name="password" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                      <button type="submit" name="login" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <?php
             include 'php/footer.php';
         ?>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,6 +30,8 @@
   </head>
   <body>
 		<?php 
+      require_once 'php/config.php'; 
+      $mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
       $activePage = "home";
       include 'php/nav.php'; 
       include 'php/titlescreen.php';

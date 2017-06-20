@@ -14,6 +14,20 @@
 	      	</ol> -->
       		<!-- Wrapper for slides-->
 		    <div role="listbox" class="carousel-inner">
+		    	<?php 
+		    	$sql = 'SELECT * FROM Event;';
+        		$result = $mysqli->query($sql);
+        		while ($row = $result->fetch_assoc()) {?>
+        			<div style="background-image: url('img/events/{$row['imagepath']}');" class="item active">
+		          		<div class="overlay"></div>
+		          		<div class="carousel-caption" id="news">
+		            		<h1 class="super-heading"><?php {$row['title']}?></h1>
+		            		<p class="super-paragraph"><?php {$row['caption']}.{$row['date']}?></p>
+		          		</div>
+		       		</div>
+        		<?php
+        		}
+        		?>
 		        <div style="background-image: url('img/carousel1.jpg');" class="item active">
 		          	<div class="overlay"></div>
 		          		<div class="carousel-caption" id="news">

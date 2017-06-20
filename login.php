@@ -34,32 +34,58 @@
             $activePage = "login";
             include 'php/nav.php'; 
             include 'php/title.php';
-            
+            $login = false;
+            if(!empty($_POST['username'])&&!empty($_POST['password'])){
+                $username = filter_input( INPUT_POST, 'username', FILTER_SANITIZE_STRING );
+                $password = filter_input( INPUT_POST, 'password', FILTER_SANITIZE_STRING );
+                $result = $mysqli->query('SELECT * FROM Users;');
+                while($row = $result->fetch_assoc()){
+                    $hash = $row['hashpassword'];
+                    $hashuser = $row['username']; 
+                if(password_verify($username, $hashuser) && password_verify($password, $hash)){
+                        $_SESSION['user'] = $username;
+                        $login = true;
+                    }  
+                }
+            }
         ?>
         <div class="container">
-            <form action="#contact_section" method="post">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input id="username" type="text" name="username" class="form-control">
+            <?php
+            //only show form if neither field is set
+            if(!isset($_POST['username']) || !isset($_POST['password'])){
+            ?>
+                <form action="" method="post">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input id="username" type="text" name="username" class="form-control">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input id="password" type="text" name="password" class="form-control">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input id="password" type="text" name="password" class="form-control">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                      <button type="submit" name="login" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log In</button>
+                    <div class="row">
+                        <div class="col-sm-12">
+                          <button type="submit" name="login" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log In</button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            <?php
+            }
+            else{
+                if($login)
+                    echo "$username, you have logged in successfully!";           
+                else
+                    print "Invalid username or passward!";  
+            }
+            ?>
         </div>
 
         <?php

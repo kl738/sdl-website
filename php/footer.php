@@ -9,7 +9,15 @@
               <li <?php if ($activePage =="members") {?>class="active" <?php } ?>><a href="members.php">Lab Members</a></li>
               <li <?php if ($activePage =="events") {?>class="active" <?php } ?>><a href="events.php">Events</a></li>
               <li <?php if ($activePage =="contact") {?>class="active" <?php } ?>><a href="contact.php">Contact</a></li>
-              <li class="pull-right"><a href="login.php" class="nav navbar-nav">Login</a></li>
+              <?php if(isset($_SESSION["user"])){?>
+    
+                    <li><a href="logout.php">Log Out</a></li>
+    
+                    <?php }else{ ?>
+    
+                    <li><a href="login.php">Login</a></li>
+
+              <?php } ?>
       </ul>
 
     </div>

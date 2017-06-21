@@ -13,6 +13,6 @@
 .img-project{
 	max-width: 220px;
 }
-.img-member{
-	
+img {
+    image-orientation: from-image;
 }

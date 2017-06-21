@@ -39,22 +39,22 @@
             <div class="container">
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive img-publication">
+                        <img src="img/publication_thumbnails/youtube.png" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
-                        <h3>[Title of Paper]</h3>
-                        <p>AUTHORS: [Insert Authors Here]</p>
-                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                        <h3>Cultural values and cross-cultural video consumption on YouTube</h3>
+                        <p>AUTHORS: Park M, Park J, Baek YM, Macy M</p>
+                        <p>PLoS ONE 2017 <a href="img/publication_pdf/youtubeculture.pdf">PDF</a></p>
                     </div>
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive img-publication">
+                        <img src="img/publication_thumbnails/hatespeech.png" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
-                        <h3>[Title of Paper]</h3>
-                        <p>AUTHORS: [Insert Authors Here]</p>
-                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                        <h3>Automated Hate Speech Detection and the Problem of Offensive Language</h3>
+                        <p>AUTHORS: Davidson T, Warmsley D, Macy M, and Weber I</p>
+                        <p>ICWSM 2017 <a href="img/publication_pdf/hatespeechdetection.pdf">PDF</a></p>
                     </div>
                 </div>
                 <div class="row row-buffer">

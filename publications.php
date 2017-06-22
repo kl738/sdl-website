@@ -57,7 +57,7 @@
                         <p>ICWSM 2017 <a href="img/publication_pdf/hatespeechdetection.pdf">PDF</a></p>
                     </div>
                 </div>
-                <div class="row row-buffer">
+                <!-- <div class="row row-buffer">
                     <div class="col-sm-3">
                         <img src="img/blog1.jpg" alt="" class="img-responsive img-publication">
                     </div>
@@ -86,7 +86,7 @@
                         <p>AUTHORS: [Insert Authors Here]</p>
                         <p>[Insert Journal and Year] <a href="#">PDF</a></p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 

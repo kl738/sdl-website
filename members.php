@@ -77,7 +77,7 @@
                 </div>              
                 <div class="row row-buffer">
                     <div class="col-sm-4">
-                        <img src="img/members/" alt="" class="img-thumbnail img-member">
+                        <img src="" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">Thomas Davidson</h3>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-4">
-                        <img src="img/members/" alt="" class="img-thumbnail img-member">
+                        <img src="" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">Sebastian Deri</h3>
@@ -126,7 +126,7 @@
                         <p><a href="sebastian.deri@gmail.co">Email</a></p>
                     </div>                    
                 </div> 
-                <div class="row row-buffer">
+                <!-- <div class="row row-buffer">
                     <div class="col-sm-4">
                         <img src="img/members/" alt="" class="img-thumbnail img-member">
                     </div>
@@ -152,7 +152,7 @@
                         </p>
                         <p><a href="">Email</a> | <a href="">Website</a></p>
                     </div>                    
-                </div>                  
+                </div>             -->      
             </div>
         </section>
 

@@ -53,7 +53,7 @@
                 </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
-                        <img src="img/members/minsu.png" alt="" class="img-thumbnail img-member">
+                        <img src="img/members/Minsu.png" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">Minsu Park</h3>

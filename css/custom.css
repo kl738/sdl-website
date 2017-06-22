@@ -2,8 +2,12 @@
 .bottom-line{
 	border-bottom: 2px gray solid;
 }
+.bottom-dotted-divider{
+	border-bottom: 2px gray dotted;
+}
 .row-buffer{
 	margin-bottom: 10px;
+	margin-top:10px;
 }
 
 .img-publication{
@@ -15,4 +19,8 @@
 }
 img {
     image-orientation: from-image;
+}
+.super-paragraph{
+	font-size: 30px;
+    font-weight: 300;
 }

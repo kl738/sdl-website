@@ -56,7 +56,9 @@
                     <p><b>Phone: </b>607-255-4555</p>
                 </div>
             </div>
-            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=uris%20hall&key=AIzaSyAzzPyNkaXsF8mod_eaZuQouHyarGGSV2k" allowfullscreen></iframe>
+            <div class="row">
+                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=uris%20hall&key=AIzaSyAzzPyNkaXsF8mod_eaZuQouHyarGGSV2k" allowfullscreen></iframe>
+            </div>
 
         </div>
 

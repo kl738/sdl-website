@@ -39,7 +39,7 @@
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
                 <h2>Current Members</h2>
-                <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/michael.jpg" alt="" class="img-thumbnail img-member">
                     </div>
@@ -51,7 +51,7 @@
                         <p><a href="mwm14@cornell.edu">Email</a> | <a href="https://sites.google.com/site/michaelmacy14/home">Website</a></p>
                     </div>
                 </div>
-                <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/minsu.png" alt="" class="img-thumbnail img-member">
                     </div>
@@ -63,7 +63,7 @@
                         <p><a href="mp867@cornell.edu">Email</a> | <a href="https://sites.google.com/site/mansumansu/">Website</a></p>
                     </div>
                 </div>
-                <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/rediet.jpg" alt="" class="img-thumbnail img-member">
                     </div>
@@ -75,7 +75,7 @@
                         <p><a href="rediettes@gmail.com">Email</a> | <a href="http://www.cs.cornell.edu/~red/">Website</a></p>
                     </div>                    
                 </div>              
-                <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="" alt="" class="img-thumbnail img-member">
                     </div>
@@ -87,7 +87,7 @@
                         <p><a href="trd54@cornell.edu">Email</a> | <a href="t-davidson.github.io">Website</a></p>
                     </div>                    
                 </div>              
-                <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/fernando.jpg" alt="" class="img-thumbnail img-member">
                     </div>
@@ -99,7 +99,7 @@
                         <p><a href="jp975@cornell.edu">Email</a> | <a href="http://www.fernandoplascencia.net/about">Website</a> | <a href="https://github.com/ferplascencia">Github</a></p>
                     </div>                    
                 </div>         
-                <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/alexander.png" alt="" class="img-thumbnail img-member">
                     </div>
@@ -113,7 +113,7 @@
                         <p><a href="amr442@cornell.edu">Email</a> | <a href="alexruch.weebly.com">Website</a></p>
                     </div> 
                 </div>
-                <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="" alt="" class="img-thumbnail img-member">
                     </div>
@@ -126,7 +126,33 @@
                         <p><a href="sebastian.deri@gmail.co">Email</a></p>
                     </div>                    
                 </div> 
-                <!-- <div class="row row-buffer">
+                <div class="row row-buffer bottom-dotted-divider">
+                    <div class="col-sm-4">
+                        <img src="" alt="" class="img-thumbnail img-member">
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="text-center">Chris Cameron</h3>
+                        <h4 class="text-center"></h4>
+                        <h5 class="text-center">Department of Sociology</h5>
+                        <p>
+                        </p>
+                        <p><a href="cjc73@cornell.edu">Email</a> <!-- | <a href="">Website --></a></p>
+                    </div>                    
+                </div> 
+                <div class="row row-buffer bottom-dotted-divider">
+                    <div class="col-sm-4">
+                        <img src="" alt="" class="img-thumbnail img-member">
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 class="text-center">George Berry</h3>
+                        <h4 class="text-center">PhD Student</h4>
+                        <h5 class="text-center">Department of Sociology</h5>
+                        <p>
+                        </p>
+                        <p><a href="geb97@cornell.edu">Email</a><!--  | <a href="">Website</a> --></p>
+                    </div>                    
+                </div> 
+                <!-- <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/" alt="" class="img-thumbnail img-member">
                     </div>
@@ -139,8 +165,7 @@
                         <p><a href="">Email</a> | <a href="">Website</a></p>
                     </div>                    
                 </div>                            
-                <h2>Past Members</h2>
-                <div class="row row-buffer">
+                                <div class="row row-buffer">
                     <div class="col-sm-4">
                         <img src="img/members/" alt="" class="img-thumbnail img-member">
                     </div>
@@ -152,7 +177,9 @@
                         </p>
                         <p><a href="">Email</a> | <a href="">Website</a></p>
                     </div>                    
-                </div>             -->      
+                </div>             --> 
+                <h2>Past Members</h2>
+     
             </div>
         </section>
 

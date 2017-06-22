@@ -59,6 +59,16 @@
                 <h2>Current Projects</h2>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
+                        <img src="img/project_thumbnails/hatespeech.png" alt="" class="img-thumbnail img-project">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>Hate Speech</h3>
+                        <p>2014-Present </p>
+                        <p>Michael Macy, Dana Warmsley(Grad SDL member in Center for Applied Mathematics), and Ingmar Weber (at QCRI) have been working on a project to study hate speech and hate speakers of social media. They recently published a <a href="img/publication_pdf/hatespeechdetection.pdf">paper</a> (<a href="https://github.com/t-davidson/hate-speech-and-offensive-language">data/source code</a>) focusing on some of the problems associated with using machine learning models to automatically detect hate speech. They are currently looking further into the characteristics of hate speakers and their personal networks to better understand the phenomenon.</p>
+                    </div>
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
                         <img src="img/uris.jpg" alt="" class="img-thumbnail img-project">
                     </div>
                     <div class="col-sm-9">
@@ -78,26 +88,6 @@
                     </div>
                 </div>
                 <h2>Past Projects</h2>
-                <div class="row row-buffer">
-                    <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-project">
-                    </div>
-                    <div class="col-sm-9">
-                        <h3>[Project Name]</h3>
-                        <p>[Year Started-Year Ended] [Supported By: ]</p>
-                        <p>[Description]</p>
-                    </div>
-                </div>
-                <div class="row row-buffer">
-                    <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-thumbnail img-project">
-                    </div>
-                    <div class="col-sm-9">
-                        <h3>[Project Name]</h3>
-                        <p>[Year Started-Year Ended] [Supported By: ]</p>
-                        <p>[Description]</p>
-                    </div>
-                </div>
             </div>
         </section>
 

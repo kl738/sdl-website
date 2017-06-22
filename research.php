@@ -49,7 +49,7 @@
                         <p class="lead">The Assistant Director is Chris Cameron, a PhD candidate at Cornell.</p>
                     </div>
                     <div class="col-sm-4">
-                        <img src="img/nsf.png" alt="" class="img-responsive">
+                        <img src="img/general/nsf.png" alt="" class="img-responsive">
                     </div>
                 </div>
             </div>
@@ -64,12 +64,12 @@
                     <div class="col-sm-9">
                         <h3>Hate Speech</h3>
                         <p>2014-Present </p>
-                        <p>Michael Macy, Dana Warmsley(Grad SDL member in Center for Applied Mathematics), and Ingmar Weber (at QCRI) have been working on a project to study hate speech and hate speakers of social media. They recently published a <a href="img/publication_pdf/hatespeechdetection.pdf">paper</a> (<a href="https://github.com/t-davidson/hate-speech-and-offensive-language">data/source code</a>) focusing on some of the problems associated with using machine learning models to automatically detect hate speech. They are currently looking further into the characteristics of hate speakers and their personal networks to better understand the phenomenon.</p>
+                        <p>Thomas Davidson, Michael Macy, Dana Warmsley(Grad SDL member in Center for Applied Mathematics), and Ingmar Weber (at QCRI) have been working on a project to study hate speech and hate speakers of social media. They recently published a <a href="img/publication_pdf/hatespeechdetection.pdf">paper</a> (<a href="https://github.com/t-davidson/hate-speech-and-offensive-language">data/source code</a>) focusing on some of the problems associated with using machine learning models to automatically detect hate speech. They are currently looking further into the characteristics of hate speakers and their personal networks to better understand the phenomenon.</p>
                     </div>
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/uris.jpg" alt="" class="img-thumbnail img-project">
+                        <img src="img/project_thumbnails/uris.jpg" alt="" class="img-thumbnail img-project">
                     </div>
                     <div class="col-sm-9">
                         <h3>Complex Social Contagion</h3>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/EnglandNormInversePaletteCrop.jpg" alt="" class="img-thumbnail img-project">
+                        <img src="img/project_thumbnails/EnglandNormInversePaletteCrop.jpg" alt="" class="img-thumbnail img-project">
                     </div>
                     <div class="col-sm-9">
                         <h3>Cross-cultural differences in communication networks</h3>

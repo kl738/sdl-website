@@ -12,7 +12,7 @@
           	<div class="col-sm-4">
 	            <div class="post">
 	            	<h3><a href="publications.php">Publications</a></h3>
-	              	<div class="image"><a href="publications.php"><img src="img/general/EnglandNormInversePaletteCrop.jpg" alt="" class="img-thumbnail front-page"></a></div>
+	              	<div class="image"><a href="publications.php"><img src="img/general/uris.jpg" alt="" class="img-thumbnail front-page"></a></div>
 	              	<p>Papers and Talks</p>
 		        </div>
           	</div>

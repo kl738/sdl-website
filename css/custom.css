@@ -25,6 +25,6 @@ img {
     font-weight: 300;
 }
 .front-page{
-	width: 400px;
-	height:240px;
+	margin: 0 auto;
+	min-height: 300px;
 }

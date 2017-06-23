@@ -57,36 +57,46 @@
                         <p>ICWSM 2017 <a href="img/publication_pdf/hatespeechdetection.pdf">PDF</a></p>
                     </div>
                 </div>
-                <!-- <div class="row row-buffer">
+                <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog1.jpg" alt="" class="img-responsive img-publication">
+                        <img src="" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
-                        <h3>[Title of Paper]</h3>
-                        <p>AUTHORS: [Insert Authors Here]</p>
-                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                        <h3>Effects of violence on risk perception, policy preferences, and pro-social behavior: evidence from an online experiment.</h3>
+                        <p>AUTHORS: Plascencia F</p>
+                        <p>NARSC <a href="#">PDF</a></p>
                     </div>
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog2.jpg" alt="" class="img-responsive img-publication">
+                        <img src="" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
-                        <h3>[Title of Paper]</h3>
-                        <p>AUTHORS: [Insert Authors Here]</p>
-                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                        <h3>Stated Preferences and Well-Being in Risky Environments.</h3>
+                        <p>AUTHORS: Plascencia F</p>
+                        <p>NARSC 2016 <a href="#">PDF</a></p>
                     </div>
                 </div>
                 <div class="row row-buffer">
                     <div class="col-sm-3">
-                        <img src="img/blog3.jpg" alt="" class="img-responsive img-publication">
+                        <img src="" alt="" class="img-responsive img-publication">
                     </div>
                     <div class="col-sm-9">
-                        <h3>[Title of Paper]</h3>
-                        <p>AUTHORS: [Insert Authors Here]</p>
-                        <p>[Insert Journal and Year] <a href="#">PDF</a></p>
+                        <h3>Fuzzy Analysis for Intuitionistic Preferences on Complex Networks</h3>
+                        <p>AUTHORS: Plascencia F</p>
+                        <p>NARSC 2016 <a href="#">PDF</a></p>
                     </div>
-                </div> -->
+                </div>
+                <div class="row row-buffer">
+                    <div class="col-sm-3">
+                        <img src="" alt="" class="img-responsive img-publication">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3>Cooperative Games, Learning and Strategic Interaction in Social Networks.</h3>
+                        <p>AUTHORS: Plascencia F</p>
+                        <p>NARSC 2014 <a href="#">PDF</a></p>
+                    </div>
+                </div>
             </div>
         </section>
 

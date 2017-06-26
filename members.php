@@ -160,9 +160,9 @@
                         <h3 class="text-center">Jialu Bao</h3>
                         <h4 class="text-center">Undergraduate Student</h4>
                         <h5 class="text-center">Department of Mathematics; Department of Information Science</h5>
-                        <p>I am a junior majoring in Mathematics and Information Science in the College of Art and Sciences. I currently work on the Homophily project under the supervision by Chris Cameron and George Berry. Besides that, I am interested in fake news detection and the spread of fake news. When I am working on academics, I like reading and taking photos, and I post photos on baojialu.com. 
+                        <p>I am a junior majoring in Mathematics and Information Science in the College of Art and Sciences. I currently work on the Homophily project under the supervision by Chris Cameron and George Berry. Besides that, I am interested in fake news detection and the spread of fake news. When I am working on academics, I like reading and taking photos, and I post photos on <a href="http://www.baojialu.com">my website</a>. 
                         </p>
-                        <p><a href="jb965@cornell.edu">Email</a> | <a href="baojialu.com">Website</a></p>
+                        <p><a href="jb965@cornell.edu">Email</a> | <a href="http://www.baojialu.com">Website</a></p>
                     </div>                    
                 </div>                            
                 <!-- <div class="row row-buffer">
@@ -178,7 +178,7 @@
                         <p><a href="">Email</a> | <a href="">Website</a></p>
                     </div>                    
                 </div>             --> 
-                <h2>Past Members</h2>
+                <!-- <h2>Past Members</h2> -->
      
             </div>
         </section>

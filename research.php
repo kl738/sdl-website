@@ -87,7 +87,7 @@
                         <p>Using Twitter data, this project aims to compare the topology of communication networks by cultural and economic factors at the country level.</p>
                     </div>
                 </div>
-                <h2>Past Projects</h2>
+                <!-- <h2>Past Projects</h2> -->
             </div>
         </section>
 

@@ -115,13 +115,13 @@
                 </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
-                        <img src="" alt="" class="img-thumbnail img-member">
+                        <img src="img/members/seb.jpg" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">Sebastian Deri</h3>
                         <h4 class="text-center">PhD Student</h4>
                         <h5 class="text-center">Department of Social Psychology</h5>
-                        <p>Hey! I’m a PhD student in social psychology, with a minor in information science. I’m interested in the many varieties of false beliefs that we often come to have. Why is it for example that some people believe the earth is flat, that President Obama was not born in the US, or “bad things happen in threes”? In seeking answers to these questions, I draw from research on biases &amp; heuristics, motivated reasoning, social influence, and social networks in the fields of psychology, sociology, and occasionally political science and economics. I primarily use in-lab and online experiments, in terms of methods. But I am equally passionate about the burgeoning field of computational social science, and aim to increasing incorporate in my research computational models, analyses from large-scale datasets, and experiments in real world digital environments (e.g. Twitter). As a result, I have also worked on research with organizations like Nokia Bell Labs. This adventure, which I am grateful to be on, is made possible through support from Cornell’s Sage Fellowship and the Department of the Defense’s Air Force Research Laboratory.
+                        <p>Hey! I’m a PhD student in social psychology, with a minor in information science. I’m interested in the many varieties of false beliefs that we often come to have. Why is it for example that some people believe the earth is flat, that President Obama was not born in the US, or “bad things happen in threes”? In seeking answers to these questions, I draw from research on biases & heuristics, motivated reasoning, social influence, and social networks mainly in the fields of psychology, sociology. I primarily use in-lab and online experiments, in terms of methods. I am also passionate about the burgeoning field of computational social science, and aim to increasingly incorporate in my research computational models, analyses from large-scale datasets, and experiments in real world digital environments (e.g. Twitter). As a result, I have also worked on research with organizations like Nokia Bell Labs. My research is supported by Cornell’s Sage Fellowship and the Department of the Defense.
                         </p>
                         <p><a href="sebastian.deri@gmail.co">Email</a></p>
                     </div>                    
@@ -152,20 +152,20 @@
                         <p><a href="geb97@cornell.edu">Email</a><!--  | <a href="">Website</a> --></p>
                     </div>                    
                 </div> 
-                <!-- <div class="row row-buffer bottom-dotted-divider">
+                <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
-                        <img src="img/members/" alt="" class="img-thumbnail img-member">
+                        <img src="img/members/jialu.jpg" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
-                        <h3 class="text-center"></h3>
-                        <h4 class="text-center"></h4>
-                        <h5 class="text-center">Department of </h5>
-                        <p>
+                        <h3 class="text-center">Jialu Bao</h3>
+                        <h4 class="text-center">Undergraduate Student</h4>
+                        <h5 class="text-center">Department of Mathematics; Department of Information Science</h5>
+                        <p>I am a junior majoring in Mathematics and Information Science in the College of Art and Sciences. I currently work on the Homophily project under the supervision by Chris Cameron and George Berry. Besides that, I am interested in fake news detection and the spread of fake news. When I am working on academics, I like reading and taking photos, and I post photos on baojialu.com. 
                         </p>
-                        <p><a href="">Email</a> | <a href="">Website</a></p>
+                        <p><a href="jb965@cornell.edu">Email</a> | <a href="baojialu.com">Website</a></p>
                     </div>                    
                 </div>                            
-                                <div class="row row-buffer">
+                <!-- <div class="row row-buffer">
                     <div class="col-sm-4">
                         <img src="img/members/" alt="" class="img-thumbnail img-member">
                     </div>

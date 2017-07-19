@@ -67,7 +67,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input id="password" type="text" name="password" class="form-control">
+                                <input id="password" type="password" name="password" class="form-control">
                             </div>
                         </div>
                     </div>

@@ -7,11 +7,10 @@
 	<div class="container">
 		<div id="carousel-home" data-ride="carousel" class="carousel slide carousel-fullscreen carousel-fade" data-interval="5000" data-pause="false">
 	      	<!-- Indicators-->
-	      	<!-- <ol class="carousel-indicators">
+	      	<ol class="carousel-indicators">
 	        	<li data-target="#carousel-home" data-slide-to="0" class="active"></li>
 	        	<li data-target="#carousel-home" data-slide-to="1"></li>
-	        	<li data-target="#carousel-home" data-slide-to="2"></li>
-	      	</ol> -->
+	      	</ol>
       		<!-- Wrapper for slides-->
 		    <div role="listbox" class="carousel-inner">
 		    	<div style="background-image: url('img/events/hatespeech.png');" class="item active">
@@ -37,14 +36,12 @@
 		        </div> -->
 		    </div>
 		    <!--Left Right Arrows-->
-		    <!-- <a class="left carousel-control" href="#carousel-home" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left"></span>
+		    <a class="left carousel-control" href="#carousel-home" data-slide="prev">
 			    <span class="sr-only">Previous</span>
 			</a>
 			<a class="right carousel-control" href="#carousel-home" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right"></span>
 			    <span class="sr-only">Next</span>
-			</a> -->
+			</a>
     	</div>
 	</div>
 </section>

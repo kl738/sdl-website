@@ -36,8 +36,7 @@
       include 'php/nav.php'; 
       include 'php/titlescreen.php';
       include 'php/about.php';
-      include 'php/row_headings.php';
-      include 'php/news.php'; 
+      include 'php/row_headings.php'; 
       include 'php/footer.php';
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

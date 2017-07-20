@@ -57,7 +57,27 @@
         <section class="section--padding-small">
             <div class="container">
                 <h2>Current Projects</h2>
-                <div class="row row-buffer">
+                <?php 
+                    $sql = 'SELECT * FROM Project';
+                    $result = $mysqli->query($sql);
+                    while ($row = $result->fetch_assoc()) {
+                        $thumbnail = "img/project_thumbnails/".$row['imagepath'];
+                        $title = $row['title'];
+                        $timeframe = $row['timeframe'];
+                        $description = $row['description'];
+                        echo '<div class="row row-buffer">';
+                            echo '<div class="col-sm-3">';
+                                echo '<img src="',$thumbnail,'" alt="" class="img-thumbnail img-project">';
+                            echo '</div>';
+                            echo '<div class="col-sm-9">';
+                                echo '<h3>',$title,'</h3>';
+                                echo '<p>',$timeframe,'</p>';
+                                echo '<p>',$description,'</p>';
+                            echo '</div>';
+                        echo '</div>';    
+                    }
+                ?>
+                <!-- <div class="row row-buffer">
                     <div class="col-sm-3">
                         <img src="img/project_thumbnails/hatespeech.png" alt="" class="img-thumbnail img-project">
                     </div>
@@ -86,7 +106,7 @@
                         <p>2012-Present Supported By: NSF</p>
                         <p>Using Twitter data, this project aims to compare the topology of communication networks by cultural and economic factors at the country level.</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- <h2>Past Projects</h2> -->
             </div>
         </section>

@@ -39,7 +39,32 @@
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
                 <h2>Current Members</h2>
-                <div class="row row-buffer bottom-dotted-divider">
+                <?php 
+                    $sql = 'SELECT * FROM Member';
+                    $result = $mysqli->query($sql);
+                    while ($row = $result->fetch_assoc()) {
+                        $thumbnail = "img/members/".$row['imagepath'];
+                        $name = $row['name'];
+                        $position = $row['position'];
+                        $department = $row['department'];
+                        $description = $row['description'];
+                        $email = $row['email'];
+                        $website = $row['website'];
+                        echo '<div class="row row-buffer bottom-dotted-divider">';
+                            echo '<div class="col-sm-4">';
+                                echo '<img src="',$thumbnail,'" alt="" class="img-thumbnail img-member">';
+                            echo '</div>';
+                            echo '<div class="col-sm-8">';
+                                echo '<h3 class="text-center">',$name,'</h3>';
+                                echo '<h4 class="text-center">',$position,'</h4>';
+                                echo '<h5 class="text-center">',$department,'</h5>';
+                                echo '<p>',$description,'</p>';
+                                echo '<p><a href=',$email,'>',$email,'</a> | <a href=',$website,'>Website</a></p>';
+                            echo '</div>';
+                        echo '</div>';    
+                    }
+                ?>
+                <!-- <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/michael.jpg" alt="" class="img-thumbnail img-member">
                     </div>
@@ -136,7 +161,7 @@
                         <h5 class="text-center">Department of Sociology</h5>
                         <p>
                         </p>
-                        <p><a href="cjc73@cornell.edu">Email</a> <!-- | <a href="">Website --></a></p>
+                        <p><a href="cjc73@cornell.edu">Email</a> </a></p>
                     </div>                    
                 </div> 
                 <div class="row row-buffer bottom-dotted-divider">
@@ -149,7 +174,7 @@
                         <h5 class="text-center">Department of Sociology</h5>
                         <p>
                         </p>
-                        <p><a href="geb97@cornell.edu">Email</a><!--  | <a href="">Website</a> --></p>
+                        <p><a href="geb97@cornell.edu">Email</a></p>
                     </div>                    
                 </div> 
                 <div class="row row-buffer bottom-dotted-divider">
@@ -164,7 +189,7 @@
                         </p>
                         <p><a href="jb965@cornell.edu">Email</a> | <a href="http://www.baojialu.com">Website</a></p>
                     </div>                    
-                </div>                            
+                </div>                          -->   
                 <!-- <div class="row row-buffer">
                     <div class="col-sm-4">
                         <img src="img/members/" alt="" class="img-thumbnail img-member">

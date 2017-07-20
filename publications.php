@@ -37,7 +37,28 @@
         ?>
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
-                <div class="row row-buffer">
+                <?php 
+                    $sql = 'SELECT * FROM Publication';
+                    $result = $mysqli->query($sql);
+                    while ($row = $result->fetch_assoc()) {
+                        $thumbnail = "img/publication_thumbnails/".$row['imagepath'];
+                        $title = $row['title'];
+                        $authors = $row['authors'];
+                        $conference = $row['conference'];
+                        $pdf = "img/publication_pdf/".$row['pdfpath'];
+                        echo '<div class="row row-buffer">';
+                            echo '<div class="col-sm-3">';
+                                echo '<img src="',$thumbnail,'" alt="" class="img-responsive img-publication">';
+                            echo '</div>';
+                            echo '<div class="col-sm-9">';
+                                echo '<h3>',$title,'</h3>';
+                                echo '<p>AUTHORS: ',$authors,'</p>';
+                                echo '<p>',$conference,' <a href=',$pdf,'>PDF</a></p>';
+                            echo '</div>';
+                        echo '</div>';    
+                    }
+                ?>
+                <!-- <div class="row row-buffer">
                     <div class="col-sm-3">
                         <img src="img/publication_thumbnails/youtube.png" alt="" class="img-responsive img-publication">
                     </div>
@@ -96,7 +117,7 @@
                         <p>AUTHORS: Plascencia F</p>
                         <p>NARSC 2014 <a href="#">PDF</a></p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 

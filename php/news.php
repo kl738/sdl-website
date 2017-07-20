@@ -46,7 +46,7 @@
       				$caption = $row[caption];
       				// if it's the first item, then set its to be item active, else the class is just item
       				if($i==0){
-	      				echo "<div style=\"background-image: url(","'img/events/jumbotron1.jpg');\""," class=\"item active\">";
+	      				echo "<div style=\"background-image: url(","'{$url}');\""," class=\"item active\">";
 	      					print("<div class=\"carousel-caption\" id=\"news\">");
 	      						print("<h1 class=\"super-heading\">{$title}</h1>");
 	      						print("<p class=\"super-paragraph\">{$caption}</p>");

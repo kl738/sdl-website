@@ -148,31 +148,31 @@
                         <h5 class="text-center">Department of Social Psychology</h5>
                         <p>Hey! I’m a PhD student in social psychology, with a minor in information science. I’m interested in the many varieties of false beliefs that we often come to have. Why is it for example that some people believe the earth is flat, that President Obama was not born in the US, or “bad things happen in threes”? In seeking answers to these questions, I draw from research on biases & heuristics, motivated reasoning, social influence, and social networks mainly in the fields of psychology, sociology. I primarily use in-lab and online experiments, in terms of methods. I am also passionate about the burgeoning field of computational social science, and aim to increasingly incorporate in my research computational models, analyses from large-scale datasets, and experiments in real world digital environments (e.g. Twitter). As a result, I have also worked on research with organizations like Nokia Bell Labs. My research is supported by Cornell’s Sage Fellowship and the Department of the Defense.
                         </p>
-                        <p><a href="sebastian.deri@gmail.co">Email</a></p>
+                        <p><a href="sebastian.deri@gmail.com">Email</a></p>
                     </div>                    
                 </div> 
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
-                        <img src="" alt="" class="img-thumbnail img-member">
+                        <img src="chris.png" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">Chris Cameron</h3>
                         <h4 class="text-center"></h4>
                         <h5 class="text-center">Department of Sociology</h5>
-                        <p>
+                        <p>Academic Interests: Economic Sociology, Social Simulation, Processes on Networks
                         </p>
                         <p><a href="cjc73@cornell.edu">Email</a> </a></p>
                     </div>                    
                 </div> 
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
-                        <img src="" alt="" class="img-thumbnail img-member">
+                        <img src="george.png" alt="" class="img-thumbnail img-member">
                     </div>
                     <div class="col-sm-8">
                         <h3 class="text-center">George Berry</h3>
                         <h4 class="text-center">PhD Student</h4>
                         <h5 class="text-center">Department of Sociology</h5>
-                        <p>
+                        <p>Academic Interests: Computational Sociology, Social Networks, Online Interaction, Social Norms
                         </p>
                         <p><a href="geb97@cornell.edu">Email</a></p>
                     </div>                    

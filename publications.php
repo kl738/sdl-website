@@ -37,6 +37,64 @@
         ?>
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
+                <?php
+                    if(isset($_SESSION['user'])){?>
+                        <h2>Add Paper</h2>
+                        <form method = "post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                            <div class="form-group">
+                              <label for="authors">Authors:</label>
+                              <input type="text" class="form-control" id="authors" name="authors">
+                            </div>         
+                            <div class="form-group">
+                              <label for="conference">Conference:</label>
+                              <input type="text" class="form-control" id="conference" name="conference">
+                            </div> 
+                            <p>
+                                <label>Thumbnail Image upload: </label>
+                                <input id="thumbnailImage" type="file" name="thumbnailImage" accept=".jpg, .jpeg, .png">
+                            </p>
+                            <p>
+                                <label>PDF upload: </label>
+                                <input id="pdf" type="file" name="pdf" accept=".pdf">
+                            </p>  
+                            <input type="submit" name = 'submit' value="Submit">
+                        </form>
+                        <br>   <?php
+
+                        if(isset($_POST["submit"])){
+                            $title = filter_input( INPUT_POST, 'title', FILTER_SANITIZE_STRING );
+                            $authors = filter_input(INPUT_POST, 'authors', FILTER_SANITIZE_STRING);
+                            $conference =  filter_input( INPUT_POST, 'conference', FILTER_SANITIZE_STRING );
+                            $thumbnailImage = $_FILES['thumbnailImage'];
+                            $thumbnailOriginalName = $thumbnailImage['name'];
+                            $pdf = $_FILES['pdf'];
+                            $pdfOriginalName = $pdf['name'];
+                            if(!empty($title)&&!empty($authors)&&!empty($conference)){
+                                if ( $thumbnailImage['error'] == 0 ) {
+                                   $tempName = $thumbnailImage['tmp_name'];
+                                   move_uploaded_file($tempName, "img/publication_thumbnails/".$thumbnailOriginalName);
+                                }
+                                if ( $pdf['error'] == 0 ) {
+                                   $tempName = $pdf['tmp_name'];
+                                   move_uploaded_file($tempName, "img/publication_pdf/".$pdfOriginalName);
+                                }
+                                $sql = "INSERT INTO Publication (imagepath, title, authors, conference, pdfpath) VALUES (?,?,?,?,?)";
+                                $stmt = $mysqli->stmt_init();
+                                if($stmt->prepare($sql)){
+                                    $stmt->bind_param('sssss', $thumbnailOriginalName, $title, $authors, $conference, $pdfOriginalName);
+                                    $stmt->execute();
+                                    $result = $stmt->get_result();
+                                }
+                                print("<p>The file $thumbnailOriginalName and $pdfOriginalName was uploaded successfully.</p>");
+                                header("Refresh:0");
+                            }
+                        }
+                    }
+                ?>
                 <?php 
                     $sql = 'SELECT * FROM Publication';
                     $result = $mysqli->query($sql);

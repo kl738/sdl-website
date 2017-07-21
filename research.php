@@ -98,10 +98,8 @@
                                     $stmt->execute();
                                     $result = $stmt->get_result();
                                 }
-                                
                                 print("<p>The file $originalName was uploaded successfully.</p>");
                                 header("Refresh:0");
-
                             }
                         }
                     }

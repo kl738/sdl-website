@@ -55,7 +55,7 @@
 	      				$i+=1;
       				}
       				else{
-      					echo "<div style=\"background-image: url(","'img/events/jumbotron1.jpg');\""," class=\"item\">";
+      					echo "<div style=\"background-image: url(","'{$url}');\""," class=\"item\">";
 	      					print("<div class=\"carousel-caption\" id=\"news\">");
 	      						print("<h1 class=\"super-heading\">{$title}</h1>");
 	      						print("<p class=\"super-paragraph\">{$caption}</p>");

@@ -56,6 +56,58 @@
         </section>
         <section class="section--padding-small">
             <div class="container">
+                <?php
+                    if(isset($_SESSION['user'])){?>
+                        <h2>Add Project</h2>
+                        <form method = "post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                            <div class="form-group">
+                              <label for="timeframe">Years worked on:</label>
+                              <input type="text" class="form-control" id="timeframe" name="timeframe">
+                            </div>         
+                            <div class="form-group">
+                              <label for="description">Description:</label>
+                              <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+                            </div> 
+                            <p>
+                                <label>Image upload: </label>
+                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                            </p>  
+                            <input type="submit" name = 'submit' value="Submit">
+                        </form>
+                        <br>   <?php
+
+                        if(isset($_POST["submit"])){
+                            $title = filter_input( INPUT_POST, 'title', FILTER_SANITIZE_STRING );
+                            $timeframe = filter_input(INPUT_POST, 'timeframe', FILTER_SANITIZE_STRING);
+                            $description =  filter_input( INPUT_POST, 'description', FILTER_SANITIZE_STRING );
+                            $newImage = $_FILES['newImage'];
+                            $originalName = $newImage['name'];
+                            if(!empty($title)&&!empty($description)&&!empty($timeframe)){
+                                if ( $newImage['error'] == 0 ) {
+                                   $tempName = $newImage['tmp_name'];
+                                   move_uploaded_file($tempName, "img/project_thumbnails/".$originalName);
+                                }
+                                $sql = "INSERT INTO Project (imagepath, title, description, timeframe) VALUES (?,?,?,?)";
+                                $stmt = $mysqli->stmt_init();
+                                if($stmt->prepare($sql)){
+                                    $stmt->bind_param('ssss', $originalName, $title, $description, $timeframe);
+                                    $stmt->execute();
+                                    $result = $stmt->get_result();
+                                }
+                                if(mysql_errno())
+                                    echo "MySQL error ".mysql_errno();
+                   
+                                print("<p>The file $originalName was uploaded successfully.</p>");
+                    
+                            
+                            }
+                        }
+                    }
+                ?>
                 <h2>Current Projects</h2>
                 <?php 
                     $sql = 'SELECT * FROM Project';

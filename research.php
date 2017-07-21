@@ -98,12 +98,10 @@
                                     $stmt->execute();
                                     $result = $stmt->get_result();
                                 }
-                                if(mysql_errno())
-                                    echo "MySQL error ".mysql_errno();
-                   
+                                
                                 print("<p>The file $originalName was uploaded successfully.</p>");
-                    
-                            
+                                header("Refresh:0");
+
                             }
                         }
                     }

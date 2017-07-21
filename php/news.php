@@ -48,8 +48,8 @@
       				if($i==0){
 	      				echo "<div style=\"background-image: url(","'{$url}');\""," class=\"item active\">";
 	      					print("<div class=\"carousel-caption\" id=\"news\">");
-	      						print("<h1 class=\"super-heading\">{$title}</h1>");
-	      						print("<p class=\"super-paragraph\">{$caption}</p>");
+	      						print("<h1 class=\"super-heading text-stand-out\">{$title}</h1>");
+	      						print("<p class=\"super-paragraph text-stand-out\">{$caption}</p>");
 	      					print("</div>");
 	      				print("</div>");
 	      				$i+=1;
@@ -57,8 +57,8 @@
       				else{
       					echo "<div style=\"background-image: url(","'{$url}');\""," class=\"item\">";
 	      					print("<div class=\"carousel-caption\" id=\"news\">");
-	      						print("<h1 class=\"super-heading\">{$title}</h1>");
-	      						print("<p class=\"super-paragraph\">{$caption}</p>");
+	      						print("<h1 class=\"super-heading text-stand-out\">{$title}</h1>");
+	      						print("<p class=\"super-paragraph text-stand-out\">{$caption}</p>");
 	      					print("</div>");
 	      				print("</div>");
       				}

@@ -38,6 +38,70 @@
         ?>
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
+                <?php
+                    if(isset($_SESSION['user'])){?>
+                        <h2>Add Member</h2>
+                        <form method = "post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="name">Name:</label>
+                              <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                              <label for="position">Position:</label>
+                              <input type="text" class="form-control" id="position" name="position">
+                            </div>         
+                            <div class="form-group">
+                              <label for="department">Department:</label>
+                              <input type="text" class="form-control" id="department" name="department">
+                            </div> 
+                            <div class="form-group">
+                              <label for="description">Description:</label>
+                              <input type="text" class="form-control" id="description" name="description">
+                            </div> 
+                            <div class="form-group">
+                              <label for="email">Email:</label>
+                              <input type="text" class="form-control" id="email" name="email">
+                            </div> 
+                            <div class="form-group">
+                              <label for="website">Website:</label>
+                              <input type="text" class="form-control" id="website" name="website">
+                            </div> 
+                            <p>
+                                <label>Portrait Image upload: </label>
+                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                            </p>  
+                            <input type="submit" name = 'submit' value="Submit">
+                        </form>
+                        <br>   <?php
+
+                        if(isset($_POST["submit"])){
+                            $name = filter_input( INPUT_POST, 'name', FILTER_SANITIZE_STRING );
+                            $position = filter_input(INPUT_POST, 'position', FILTER_SANITIZE_STRING);
+                            $department =  filter_input( INPUT_POST, 'department', FILTER_SANITIZE_STRING );
+                            $description =  filter_input( INPUT_POST, 'description', FILTER_SANITIZE_STRING );
+                            $email =  filter_input( INPUT_POST, 'email', FILTER_SANITIZE_STRING );
+                            $website =  filter_input( INPUT_POST, 'website', FILTER_SANITIZE_STRING );
+                            $newImage = $_FILES['newImage'];
+                            $originalName = $newImage['name'];
+                            print($originalName);
+                            if(!empty($name)&&!empty($position)&&!empty($department)&&!empty($description)&&!empty($email)&&!empty($website)){
+                                if ( $newImage['error'] == 0 ) {
+                                   $tempName = $newImage['tmp_name'];
+                                   move_uploaded_file($tempName, "img/members/".$originalName);
+                                }
+                                $sql = "INSERT INTO Member (imagepath, name, position, department, description, email, website) VALUES (?,?,?,?,?,?,?)";
+                                $stmt = $mysqli->stmt_init();
+                                if($stmt->prepare($sql)){
+                                    $stmt->bind_param('sssssss', $originalName, $name, $position, $department, $description, $email, $website);
+                                    $stmt->execute();
+                                    $result = $stmt->get_result();
+                                }
+                                print("<p>The file $originalName was uploaded successfully.</p>");
+                                header("Refresh:0");
+                            }
+                        }
+                    }
+                ?>
                 <h2>Current Members</h2>
                 <?php 
                     $sql = 'SELECT * FROM Member';

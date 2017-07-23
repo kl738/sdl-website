@@ -86,6 +86,7 @@
                             $description =  filter_input( INPUT_POST, 'description', FILTER_SANITIZE_STRING );
                             $newImage = $_FILES['newImage'];
                             $originalName = $newImage['name'];
+                            print($originalName);
                             if(!empty($title)&&!empty($description)&&!empty($timeframe)){
                                 if ( $newImage['error'] == 0 ) {
                                    $tempName = $newImage['tmp_name'];
@@ -99,7 +100,7 @@
                                     $result = $stmt->get_result();
                                 }
                                 print("<p>The file $originalName was uploaded successfully.</p>");
-                                header("Refresh:0");
+                                //header("Refresh:0");
                             }
                         }
                     }

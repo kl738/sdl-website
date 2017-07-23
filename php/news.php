@@ -1,5 +1,48 @@
 <section class="background-white section--no-padding">
 	<div class="container">
+		<?php
+            if(isset($_SESSION['user'])){?>
+                <h2>Add Event</h2>
+                <form method = "post" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="title">Title:</label>
+                      <input type="text" class="form-control" id="title" name="title">
+                    </div>
+                    <div class="form-group">
+                      <label for="caption">Caption:</label>
+                      <input type="text" class="form-control" id="caption" name="caption">
+                    </div>         
+                    <p>
+                        <label>Image upload: </label>
+                        <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                    </p>  
+                    <input type="submit" name = 'submit' value="Submit">
+                </form>
+                <br>   <?php
+
+                if(isset($_POST["submit"])){
+                    $title = filter_input( INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+                    $caption = filter_input(INPUT_POST, 'caption', FILTER_SANITIZE_STRING);
+                    $newImage = $_FILES['newImage'];
+                    $originalName = $newImage['name'];
+                    if(!empty($title)&&!empty($caption)){
+                        if ( $newImage['error'] == 0 ) {
+                           $tempName = $newImage['tmp_name'];
+                           move_uploaded_file($tempName, "img/events/".$originalName);
+                        }
+                        $sql = "INSERT INTO Event (title, caption, imagepath) VALUES (?,?,?)";
+                        $stmt = $mysqli->stmt_init();
+                        if($stmt->prepare($sql)){
+                            $stmt->bind_param('sss', $title, $caption, $originalName);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
+                        }
+                        print("<p>The file $originalName was uploaded successfully.</p>");
+                        header("Refresh:0");
+                    }
+                }
+            }
+        ?>
 		<h2>Recent News</h2>
 	</div>
 </section>

@@ -112,6 +112,9 @@
                                 echo '<h3>',$title,'</h3>';
                                 echo '<p>AUTHORS: ',$authors,'</p>';
                                 echo '<p>',$conference,' <a href=',$pdf,'>PDF</a></p>';
+                                if(isset($_SESSION['user'])){
+                                    echo'<p><a>Edit</a> | <a href=>Delete</a></p>';
+                                }
                             echo '</div>';
                         echo '</div>';    
                     }

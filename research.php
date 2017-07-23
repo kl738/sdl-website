@@ -122,6 +122,9 @@
                                 echo '<h3>',$title,'</h3>';
                                 echo '<p>',$timeframe,'</p>';
                                 echo '<p>',$description,'</p>';
+                                if(isset($_SESSION['user'])){
+                                    echo'<p><a>Edit</a> | <a href=>Delete</a></p>';
+                                }
                             echo '</div>';
                         echo '</div>';    
                     }

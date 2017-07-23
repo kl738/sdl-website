@@ -124,6 +124,9 @@
                                 echo '<h5 class="text-center">',$department,'</h5>';
                                 echo '<p>',$description,'</p>';
                                 echo '<p><a href=',$email,'>',$email,'</a> | <a href=',$website,'>Website</a></p>';
+                                if(isset($_SESSION['user'])){
+                                  echo '<p><a>Edit</a> | <a href=>Delete</a></p>';
+                                }
                             echo '</div>';
                         echo '</div>';    
                     }

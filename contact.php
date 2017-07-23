@@ -50,14 +50,21 @@
                 </div>
                 <div class="col-sm-4">
                     <h2>Lab Address</h2>
-                    <p class="lead">Uris 372
-                    Cornell University
+                    <p class="lead">372 Uris Hall<br>
+                    Cornell University<br>
                     Ithaca, NY 14853</p>
                     <p><b>Phone: </b>607-255-4555</p>
                 </div>
             </div>
             <div class="row">
-                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=uris%20hall&key=AIzaSyAzzPyNkaXsF8mod_eaZuQouHyarGGSV2k" allowfullscreen></iframe>
+                <div class="col-sm-8">
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=uris%20hall&key=AIzaSyAzzPyNkaXsF8mod_eaZuQouHyarGGSV2k" allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Webmaster</h2>
+                    <p class="lead">Kevin Lin</p>
+                    <p><b>Email: </b>kl738@cornell.edu</p>
+                </div>
             </div>
 
         </div>

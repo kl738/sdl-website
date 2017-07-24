@@ -87,7 +87,7 @@
       				$url = 'img/events/'.$row[imagepath];
       				$title = $row[title];
       				$caption = $row[caption];
-              $id = $row[eventID];
+              $eventID = $row[eventID];
       				// if it's the first item, then set its to be item active, else the class is just item
       				if($i==0){
 	      				echo "<div style=\"background-image: url(","'{$url}');\""," class=\"item active\">";
@@ -95,7 +95,7 @@
 	      						print("<h1 class=\"super-heading text-stand-out\">{$title}</h1>");
 	      						print("<p class=\"super-paragraph text-stand-out\">{$caption}</p>");
                     if(isset($_SESSION['user'])){
-                      echo '<p><a>Edit</a> | <a href=>Delete</a></p>';
+                      echo '<p><a href="edit.php?eventID=',$eventID,'">Edit</a> | <a href="delete.php?eventID=',$eventID,'">Delete</a></p>';
                     }
 	      					print("</div>");
 	      				print("</div>");
@@ -107,7 +107,7 @@
 	      						print("<h1 class=\"super-heading text-stand-out\">{$title}</h1>");
 	      						print("<p class=\"super-paragraph text-stand-out\">{$caption}</p>");
                     if(isset($_SESSION['user'])){
-                      echo '<p><a>Edit</a> | <a href=>Delete</a></p>';
+                      echo '<p><a href="edit.php?eventID=',$eventID,'">Edit</a> | <a href="delete.php?eventID=',$eventID,'">Delete</a></p>';
                     }
 	      					print("</div>");
 	      				print("</div>");

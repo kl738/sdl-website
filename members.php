@@ -114,6 +114,7 @@
                         $description = $row['description'];
                         $email = $row['email'];
                         $website = $row['website'];
+                        $memberID = $row['memberID'];
                         echo '<div class="row row-buffer bottom-dotted-divider">';
                             echo '<div class="col-sm-4">';
                                 echo '<img src="',$thumbnail,'" alt="" class="img-thumbnail img-member">';
@@ -125,7 +126,7 @@
                                 echo '<p>',$description,'</p>';
                                 echo '<p><a href=',$email,'>',$email,'</a> | <a href=',$website,'>Website</a></p>';
                                 if(isset($_SESSION['user'])){
-                                  echo '<p><a>Edit</a> | <a href=>Delete</a></p>';
+                                  echo '<p><a href="edit.php?memberID=',$memberID,'">Edit</a> | <a href="delete.php?memberID=',$memberID,'">Delete</a></p>';
                                 }
                             echo '</div>';
                         echo '</div>';    

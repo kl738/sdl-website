@@ -104,6 +104,7 @@
                         $authors = $row['authors'];
                         $conference = $row['conference'];
                         $pdf = "img/publication_pdf/".$row['pdfpath'];
+                        $publicationID = $row['publicationID'];
                         echo '<div class="row row-buffer">';
                             echo '<div class="col-sm-3">';
                                 echo '<img src="',$thumbnail,'" alt="" class="img-responsive img-publication">';
@@ -113,7 +114,7 @@
                                 echo '<p>AUTHORS: ',$authors,'</p>';
                                 echo '<p>',$conference,' <a href=',$pdf,'>PDF</a></p>';
                                 if(isset($_SESSION['user'])){
-                                    echo'<p><a>Edit</a> | <a href=>Delete</a></p>';
+                                    echo '<p><a href="edit.php?publicationID=',$publicationID,'">Edit</a> | <a href="delete.php?publicationID=',$publicationID,'">Delete</a></p>';
                                 }
                             echo '</div>';
                         echo '</div>';    

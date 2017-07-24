@@ -114,6 +114,7 @@
                         $title = $row['title'];
                         $timeframe = $row['timeframe'];
                         $description = $row['description'];
+                        $projectID = $row['projectID'];
                         echo '<div class="row row-buffer">';
                             echo '<div class="col-sm-3">';
                                 echo '<img src="',$thumbnail,'" alt="" class="img-thumbnail img-project">';
@@ -123,7 +124,7 @@
                                 echo '<p>',$timeframe,'</p>';
                                 echo '<p>',$description,'</p>';
                                 if(isset($_SESSION['user'])){
-                                    echo'<p><a>Edit</a> | <a href=>Delete</a></p>';
+                                    echo '<p><a href="edit.php?projectID=',$projectID,'">Edit</a> | <a href="delete.php?projectID=',$projectID,'">Delete</a></p>';
                                 }
                             echo '</div>';
                         echo '</div>';    

@@ -10,6 +10,8 @@
 			<?php if ($activePage =="login") {?>Login<?php } ?>
 			<?php if ($activePage =="logout") {?>Log Out<?php } ?>
 			<?php if ($activePage =="delete") {?>Delete<?php } ?>
+			<?php if ($activePage =="edit") {?>Edit<?php } ?>
+
 	    </h1>
     </div>
 </section>

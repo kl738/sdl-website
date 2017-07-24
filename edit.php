@@ -31,7 +31,7 @@
         <?php 
             require_once 'php/config.php'; 
             $mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
-            $activePage = "research";
+            $activePage = "edit";
             include 'php/nav.php'; 
             include 'php/title.php';
         ?>
@@ -39,5 +39,8 @@
             <div class="container">
             </div>
         </section>
+        <?php
+        	 include 'php/footer.php';
+        ?>
     </body>
 </html>

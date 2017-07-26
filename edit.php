@@ -40,13 +40,11 @@
             	<?php
             		//edit project from Research section
                     if(isset($_GET[projectID])){
-                        $projectID = $_GET[projectID];
-                        //print(gettype($projectID));
+                        $projectID = $_GET[projectID];              
                         $sql = 'SELECT * FROM Project WHERE projectID = '.$projectID;                  
             			$result = $mysqli->query($sql);
             			$row = $result -> fetch_assoc();
-                        $title = $row['title'];        
-                        print($title);    
+                        $title = $row['title'];          
                         $timeframe = $row['timeframe'];
                         $description = $row['description'];
                         $imagepath = $row['imagepath'];
@@ -110,7 +108,7 @@
 			                    	}
 			                    }
 			                    print "<br>Changes have been saved.";	
-			                    header("Refresh:200");			                                       
+			                    echo "<script type='text/javascript'>window.location = 'edit.php?projectID=$projectID'</script>";		                                       
                     		}
                     		
                     	}

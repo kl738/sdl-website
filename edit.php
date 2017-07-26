@@ -87,12 +87,12 @@
 			                        $tempName = $newImage['tmp_name'];
 								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
 								    print("<br>".$originalName);
-			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ?, WHERE projectID = ? ";
+			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-			                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
-			                        $stmt->execute();
-			                        $result = $stmt->get_result();
+				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
 			                    	}				                        
 			                    }
 
@@ -102,18 +102,254 @@
 			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-			                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
-			                        $stmt->execute();
-			                        $result = $stmt->get_result();
+				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
 			                    	}
+
 			                    }
 			                    print "<br>Changes have been saved.";	
-			                    echo "<script type='text/javascript'>window.location = 'edit.php?projectID=$projectID'</script>";		                                       
-                    		}
-                    		
-                    	}
+			                    	  echo "<script type='text/javascript'>window.location = 'edit.php?projectID=$projectID'</script>";	                                     
+                    		}	
+                    }
+
+                    //edit publication from Publications section
+                    if(isset($_GET[publicationID])){
+                        $publicationID = $_GET[publicationID];              
+                        $sql = 'SELECT * FROM Publication WHERE publicationID = '.$publicationID;                  
+            			$result = $mysqli->query($sql);
+            			$row = $result -> fetch_assoc();
+                        $title = $row['title'];          
+                        $authors = $row['authors'];
+                        $conference = $row['conference'];
+                        $imagepath = $row['imagepath'];
+                        $pdfpath = $row['pdfpath'];
+
+                        ?>
+                        <h2>Edit Project</h2>
+                        <form method = "post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control" id="title" name="title" <?php echo "value = '$title'";?>
+                              >
+                            </div>
+                            <div class="form-group">
+                              <label for="authors">Authors:</label>
+                              <input type="text" class="form-control" id="authors" name="authors" <?php echo "value = '$authors'";?>>
+                            </div>         
+                            <div class="form-group">
+                              <label for="conference">Conference and Year: </label>
+                              <input type="text" class="form-control" id="conference" name="conference" <?php echo "value = '$conference'";?>>
+                            </div> 
+                            <p><a href="img/publication_pdf/<?php echo $pdfpath,'"'; ?>>Pdf File</a></p>
+
+                            <p>
+                                <label>PDF of paper upload: (leave blank to keep the current pdf)</label>
+                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                            </p>  
+                            <img <?php echo 'src="img/publication_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
+                            <p>
+                                <label>Image upload: (leave blank to keep the above photo)</label>
+                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                            </p>  
+                            <input type="submit" name = 'save' value="Save">
+                        </form>
+                        <?php                         
+		                    if(isset($_POST["save"])){	                				                
+				                //datafield
+
+				                $post_title = $_POST['title'];
+				                $post_authors = $_POST['authors'];
+				                $post_conference = $_POST['conference'];
+				                //go through 4 cases
+				                //1. both thumbnail and pdf are changed 2. only thumbnail changed. 3. only pdf changed 4. none changed
+			                    //change photo if uploaded         
+			                    if($_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
+			                    	print("photo uploaded");	                        
+			                        $newImage = $_FILES['newImage'];
+							        $originalName = $newImage['name'];
+			                        $tempName = $newImage['tmp_name'];
+								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
+								    print("<br>".$originalName);
+			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}				                        
+			                    }
+
+			                    //if no photo uloaded, keep original photo
+			                    else{
+			                    	print("photo not uploaded<br>");
+			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}
+
+			                    }
+			                    print "<br>Changes have been saved.";	
+			                    	  echo "<script type='text/javascript'>window.location = 'edit.php?publicationID=$publicationID'</script>";	                                     
+                    		}	
+                    }
+
+                    //edit member from Members section
+                    if(isset($_GET[memberID])){
+                        $memberID = $_GET[memberID];              
+                        $sql = 'SELECT * FROM Member WHERE memberID = '.$memberID;                  
+            			$result = $mysqli->query($sql);
+            			$row = $result -> fetch_assoc();
+                        $title = $row['title'];          
+                        $timeframe = $row['timeframe'];
+                        $description = $row['description'];
+                        $imagepath = $row['imagepath'];
+                        ?>
+                        <h2>Edit Project</h2>
+                        <form method = "post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control" id="title" name="title" <?php echo "value = '$title'";?>
+                              >
+                            </div>
+                            <div class="form-group">
+                              <label for="timeframe">Years worked on:</label>
+                              <input type="text" class="form-control" id="timeframe" name="timeframe" <?php echo "value = '$timeframe'";?>>
+                            </div>         
+                            <div class="form-group">
+                              <label for="description">Description:</label>
+                              <textarea class="form-control" rows="5" id="description" name="description" ><?php echo $description;?></textarea>
+                            </div> 
+                            <img <?php echo 'src="/img/project_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
+                            <p>
+                                <label>Image upload: (leave blank to keep the above photo)</label>
+                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                            </p>  
+                            <input type="submit" name = 'save' value="Save">
+                        </form>
+                        <?php                         
+		                    if(isset($_POST["save"])){	                				                
+				                //datafield
+
+				                $post_title = $_POST['title'];
+				                $post_timeframe = $_POST['timeframe'];
+				                $post_description = $_POST['description'];
+
+			                    //change photo if uploaded         
+			                    if($_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
+			                    	print("photo uploaded");	                        
+			                        $newImage = $_FILES['newImage'];
+							        $originalName = $newImage['name'];
+			                        $tempName = $newImage['tmp_name'];
+								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
+								    print("<br>".$originalName);
+			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}				                        
+			                    }
+
+			                    //if no photo uloaded, keep original photo
+			                    else{
+			                    	print("photo not uploaded<br>");
+			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}
+
+			                    }
+			                    print "<br>Changes have been saved.";	
+			                    	  echo "<script type='text/javascript'>window.location = 'edit.php?projectID=$projectID'</script>";	                                     
+                    		}	
+                    }
+
+                    //edit event from Events section
+                    if(isset($_GET[projectID])){
+                        $projectID = $_GET[projectID];              
+                        $sql = 'SELECT * FROM Project WHERE projectID = '.$projectID;                  
+            			$result = $mysqli->query($sql);
+            			$row = $result -> fetch_assoc();
+                        $title = $row['title'];          
+                        $timeframe = $row['timeframe'];
+                        $description = $row['description'];
+                        $imagepath = $row['imagepath'];
+                        ?>
+                        <h2>Edit Project</h2>
+                        <form method = "post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control" id="title" name="title" <?php echo "value = '$title'";?>
+                              >
+                            </div>
+                            <div class="form-group">
+                              <label for="timeframe">Years worked on:</label>
+                              <input type="text" class="form-control" id="timeframe" name="timeframe" <?php echo "value = '$timeframe'";?>>
+                            </div>         
+                            <div class="form-group">
+                              <label for="description">Description:</label>
+                              <textarea class="form-control" rows="5" id="description" name="description" ><?php echo $description;?></textarea>
+                            </div> 
+                            <img <?php echo 'src="/img/project_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
+                            <p>
+                                <label>Image upload: (leave blank to keep the above photo)</label>
+                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                            </p>  
+                            <input type="submit" name = 'save' value="Save">
+                        </form>
+                        <?php                         
+		                    if(isset($_POST["save"])){	                				                
+				                //datafield
+
+				                $post_title = $_POST['title'];
+				                $post_timeframe = $_POST['timeframe'];
+				                $post_description = $_POST['description'];
+
+			                    //change photo if uploaded         
+			                    if($_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
+			                    	print("photo uploaded");	                        
+			                        $newImage = $_FILES['newImage'];
+							        $originalName = $newImage['name'];
+			                        $tempName = $newImage['tmp_name'];
+								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
+								    print("<br>".$originalName);
+			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}				                        
+			                    }
+
+			                    //if no photo uloaded, keep original photo
+			                    else{
+			                    	print("photo not uploaded<br>");
+			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}
+
+			                    }
+			                    print "<br>Changes have been saved.";	
+			                    	  echo "<script type='text/javascript'>window.location = 'edit.php?projectID=$projectID'</script>";	                                     
+                    		}	
+                    }
+
+
                     	
-                    	?>
+                ?>
                     
             </div>
         </section>

@@ -45,34 +45,78 @@
                         $sql = 'SELECT * FROM Project WHERE projectID = '.$projectID;                  
             			$result = $mysqli->query($sql);
             			$row = $result -> fetch_assoc();
-                        $title = $row['title'];            
+                        $title = $row['title'];        
+                        print($title);    
                         $timeframe = $row['timeframe'];
                         $description = $row['description'];
+                        $imagepath = $row['imagepath'];
                         ?>
                         <h2>Edit Project</h2>
                         <form method = "post" enctype="multipart/form-data">
                             <div class="form-group">
                               <label for="title">Title:</label>
-                              <input type="text" class="form-control" id="title" name="title" <?php echo "value = ".$title;?>
+                              <input type="text" class="form-control" id="title" name="title" <?php echo "value = '$title'";?>
                               >
                             </div>
                             <div class="form-group">
                               <label for="timeframe">Years worked on:</label>
-                              <input type="text" class="form-control" id="timeframe" name="timeframe" <?php echo "value = ".$timeframe;?>>
+                              <input type="text" class="form-control" id="timeframe" name="timeframe" <?php echo "value = '$timeframe'";?>>
                             </div>         
                             <div class="form-group">
                               <label for="description">Description:</label>
                               <textarea class="form-control" rows="5" id="description" name="description" ><?php echo $description;?></textarea>
                             </div> 
+                            <img <?php echo 'src="/img/project_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
                             <p>
-                                <label>Image upload: </label>
+                                <label>Image upload: (leave blank to keep the above photo)</label>
                                 <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
                             </p>  
-                            <input type="submit" name = 'submit' value="Submit">
+                            <input type="submit" name = 'save' value="Save">
                         </form>
-                        <?php                        
-                    }
-            	?>
+                        <?php                         
+		                    if(isset($_POST["save"])){	                				                
+				                //datafield
+
+				                $post_title = $_POST['title'];
+				                $post_timeframe = $_POST['timeframe'];
+				                $post_description = $_POST['description'];
+
+			                    //change photo if uploaded         
+			                    if($_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
+			                    	print("photo uploaded");	                        
+			                        $newImage = $_FILES['newImage'];
+							        $originalName = $newImage['name'];
+			                        $tempName = $newImage['tmp_name'];
+								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
+								    print("<br>".$originalName);
+			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ?, WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+			                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+			                        $stmt->execute();
+			                        $result = $stmt->get_result();
+			                    	}				                        
+			                    }
+
+			                    //if no photo uloaded, keep original photo
+			                    else{
+			                    	print("photo not uploaded<br>");
+			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+			                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+			                        $stmt->execute();
+			                        $result = $stmt->get_result();
+			                    	}
+			                    }
+			                    print "<br>Changes have been saved.";	
+			                    header("Refresh:200");			                                       
+                    		}
+                    		
+                    	}
+                    	
+                    	?>
+                    
             </div>
         </section>
         <?php

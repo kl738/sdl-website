@@ -203,27 +203,42 @@
                         $sql = 'SELECT * FROM Member WHERE memberID = '.$memberID;                  
             			$result = $mysqli->query($sql);
             			$row = $result -> fetch_assoc();
-                        $title = $row['title'];          
-                        $timeframe = $row['timeframe'];
+                        $name = $row['name'];          
+                        $position = $row['position'];
+                        $department = $row['department'];
                         $description = $row['description'];
+                        $email = $row['email'];
+                        $website = $row['website'];
                         $imagepath = $row['imagepath'];
                         ?>
-                        <h2>Edit Project</h2>
+                        <h2>Edit Member</h2>
                         <form method = "post" enctype="multipart/form-data">
                             <div class="form-group">
-                              <label for="title">Title:</label>
-                              <input type="text" class="form-control" id="title" name="title" <?php echo "value = '$title'";?>
+                              <label for="name">Name:</label>
+                              <input type="text" class="form-control" id="name" name="name" <?php echo "value = '$name'";?>
                               >
                             </div>
                             <div class="form-group">
-                              <label for="timeframe">Years worked on:</label>
-                              <input type="text" class="form-control" id="timeframe" name="timeframe" <?php echo "value = '$timeframe'";?>>
-                            </div>         
+                              <label for="position">Position:</label>
+                              <input type="text" class="form-control" id="position" name="position" <?php echo "value = '$position'";?>>
+                            </div>  
+                            <div class="form-group">
+                              <label for="department">Department:</label>
+                              <input type="text" class="form-control" id="department" name="department" <?php echo "value = '$department'";?>>
+                            </div> 
                             <div class="form-group">
                               <label for="description">Description:</label>
                               <textarea class="form-control" rows="5" id="description" name="description" ><?php echo $description;?></textarea>
                             </div> 
-                            <img <?php echo 'src="/img/project_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
+                            <div class="form-group">
+                              <label for="email">Email:</label>
+                              <input type="text" class="form-control" id="email" name="email" <?php echo "value = '$email'";?>>
+                            </div> 
+                            <div class="form-group">
+                              <label for="website">Website:</label>
+                              <input type="text" class="form-control" id="website" name="website" <?php echo "value = '$website'";?>>
+                            </div> 
+                            <img <?php echo 'src="img/members/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
                             <p>
                                 <label>Image upload: (leave blank to keep the above photo)</label>
                                 <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
@@ -234,9 +249,12 @@
 		                    if(isset($_POST["save"])){	                				                
 				                //datafield
 
-				                $post_title = $_POST['title'];
-				                $post_timeframe = $_POST['timeframe'];
+				                $post_name = $_POST['name'];
+				                $post_position = $_POST['position'];
+				                $post_department = $_POST['department'];
 				                $post_description = $_POST['description'];
+				                $post_email = $_POST['email'];
+				                $post_website = $_POST['website'];
 
 			                    //change photo if uploaded         
 			                    if($_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
@@ -244,12 +262,12 @@
 			                        $newImage = $_FILES['newImage'];
 							        $originalName = $newImage['name'];
 			                        $tempName = $newImage['tmp_name'];
-								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
+								    move_uploaded_file($tempName, "img/members/$originalName");
 								    print("<br>".$originalName);
-			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
+			                        $sql = "Update Member Set name = ? , position = ?, department = ?,  description = ?, email = ?, website = ?, imagepath = ? WHERE memberID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+				                        $stmt->bind_param('sssssssi', $post_name, $post_position, $post_department, $post_description, $post_email, $post_website, $originalName, $memberID);
 				                        $stmt->execute();
 				                        $result = $stmt->get_result();
 			                    	}				                        
@@ -258,17 +276,17 @@
 			                    //if no photo uloaded, keep original photo
 			                    else{
 			                    	print("photo not uploaded<br>");
-			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
+			                    	$sql = "Update Member Set name = ? , position = ?, department = ?,  description = ?, email = ?, website = ? WHERE memberID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+				                        $stmt->bind_param('ssssssi', $post_name, $post_position, $post_department, $post_description, $post_email, $post_website, $memberID);
 				                        $stmt->execute();
 				                        $result = $stmt->get_result();
-			                    	}
+			                    	}		
 
 			                    }
 			                    print "<br>Changes have been saved.";	
-			                    	  echo "<script type='text/javascript'>window.location = 'edit.php?projectID=$projectID'</script>";	                                     
+			                    echo "<script type='text/javascript'>window.location = 'edit.php?memberID=$memberID'</script>";	                                     
                     		}	
                     }
 

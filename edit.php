@@ -37,6 +37,42 @@
         ?>
         <section class="section--no-padding">
             <div class="container">
+            	<?php
+            		//edit project from Research section
+                    if(isset($_GET[projectID])){
+                        $projectID = $_GET[projectID];
+                        //print(gettype($projectID));
+                        $sql = 'SELECT * FROM Project WHERE projectID = '.$projectID;                  
+            			$result = $mysqli->query($sql);
+            			$row = $result -> fetch_assoc();
+                        $title = $row['title'];            
+                        $timeframe = $row['timeframe'];
+                        $description = $row['description'];
+                        ?>
+                        <h2>Edit Project</h2>
+                        <form method = "post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control" id="title" name="title" <?php echo "value = ".$title;?>
+                              >
+                            </div>
+                            <div class="form-group">
+                              <label for="timeframe">Years worked on:</label>
+                              <input type="text" class="form-control" id="timeframe" name="timeframe" <?php echo "value = ".$timeframe;?>>
+                            </div>         
+                            <div class="form-group">
+                              <label for="description">Description:</label>
+                              <textarea class="form-control" rows="5" id="description" name="description" ><?php echo $description;?></textarea>
+                            </div> 
+                            <p>
+                                <label>Image upload: </label>
+                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                            </p>  
+                            <input type="submit" name = 'submit' value="Submit">
+                        </form>
+                        <?php                        
+                    }
+            	?>
             </div>
         </section>
         <?php

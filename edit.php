@@ -185,13 +185,35 @@
 			                    	}				                        
 			                    }
 			                    //only pdf uploaded, and not photo
-			                    // elseif(){
-
-			                    // }
+			                    elseif($_FILES['newImagePDF']['error']!=UPLOAD_ERR_NO_FILE&&$_FILES['newImage']['error']==UPLOAD_ERR_NO_FILE){
+			                    	//move pdf to folder
+			                    	$newImagePDF = $_FILES['newImagePDF'];
+							        $originalNamePDF = $newImagePDF['name'];
+			                        $tempName = $newImagePDF['tmp_name'];
+								    move_uploaded_file($tempName, "img/publication_pdf/$originalNamePDF");	
+								    $sql = "Update Publication Set title = ? , authors = ?, conference = ?, pdfpath = ? WHERE publicationID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('ssssi', $post_title, $post_authors, $post_authors, $originalNamePDF, $publicationID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}		
+			                    }
 			                    // //only photo uploaded, and not pdf
-			                    // elseif(){
-
-			                    // }
+			                    elseif($_FILES['newImagePDF']['error']==UPLOAD_ERR_NO_FILE&&$_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){
+			                    	//move image to folder                        
+			                        $newImage = $_FILES['newImage'];
+							        $originalName = $newImage['name'];
+			                        $tempName = $newImage['tmp_name'];
+								    move_uploaded_file($tempName, "img/publication_thumbnails/$originalName");		
+								    $sql = "Update Publication Set title = ? , authors = ?, conference = ?,  imagepath = ? WHERE publicationID = ? ";
+			                    	$stmt = $mysqli->stmt_init();
+			                    	if($stmt->prepare($sql)){
+				                        $stmt->bind_param('ssssi', $post_title, $post_authors, $post_authors, $originalName, $publicationID);
+				                        $stmt->execute();
+				                        $result = $stmt->get_result();
+			                    	}
+			                    }
 			                    //if both not uploaded, keep originals
 			                    else{
 			                    	print("photos not uploaded<br>");
@@ -205,7 +227,7 @@
 
 			                    }
 			                    print "<br>Changes have been saved.";	
-			                   	//echo "<script type='text/javascript'>window.location = 'edit.php?publicationID=$publicationID'</script>";	                                     
+			                   	echo "<script type='text/javascript'>window.location = 'edit.php?publicationID=$publicationID'</script>";	                                     
                     		}	
                     }
 

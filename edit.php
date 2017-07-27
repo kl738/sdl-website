@@ -184,14 +184,21 @@
 				                        $result = $stmt->get_result();
 			                    	}				                        
 			                    }
+			                    //only pdf uploaded, and not photo
+			                    // elseif(){
 
-			                    //if no photo uloaded, keep original photo
+			                    // }
+			                    // //only photo uploaded, and not pdf
+			                    // elseif(){
+
+			                    // }
+			                    //if both not uploaded, keep originals
 			                    else{
-			                    	print("photo not uploaded<br>");
-			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE publicationID = ? ";
+			                    	print("photos not uploaded<br>");
+			                    	$sql = "Update Publication Set title = ? , authors = ?, conference = ? WHERE publicationID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
-			                    	if($stmt->prepare($sql)){
-				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $publicationID);
+			                    	if($stmt->prepare($sql)){			                    		
+				                        $stmt->bind_param('sssi', $post_title, $post_authors, $post_conference, $publicationID);
 				                        $stmt->execute();
 				                        $result = $stmt->get_result();
 			                    	}

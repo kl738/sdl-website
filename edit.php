@@ -291,14 +291,13 @@
                     }
 
                     //edit event from Events section
-                    if(isset($_GET[projectID])){
-                        $projectID = $_GET[projectID];              
-                        $sql = 'SELECT * FROM Project WHERE projectID = '.$projectID;                  
+                    if(isset($_GET[eventID])){
+                        $eventID = $_GET[eventID];              
+                        $sql = 'SELECT * FROM Event WHERE eventID = '.$eventID;                  
             			$result = $mysqli->query($sql);
             			$row = $result -> fetch_assoc();
                         $title = $row['title'];          
-                        $timeframe = $row['timeframe'];
-                        $description = $row['description'];
+                        $caption = $row['caption'];
                         $imagepath = $row['imagepath'];
                         ?>
                         <h2>Edit Project</h2>
@@ -309,14 +308,10 @@
                               >
                             </div>
                             <div class="form-group">
-                              <label for="timeframe">Years worked on:</label>
-                              <input type="text" class="form-control" id="timeframe" name="timeframe" <?php echo "value = '$timeframe'";?>>
-                            </div>         
-                            <div class="form-group">
-                              <label for="description">Description:</label>
-                              <textarea class="form-control" rows="5" id="description" name="description" ><?php echo $description;?></textarea>
-                            </div> 
-                            <img <?php echo 'src="/img/project_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
+                              <label for="caption">Caption:</label>
+                              <input type="text" class="form-control" id="caption" name="caption" <?php echo "value = '$caption'";?>>
+                            </div>                                    
+                            <img <?php echo 'src="img/events/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
                             <p>
                                 <label>Image upload: (leave blank to keep the above photo)</label>
                                 <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
@@ -328,8 +323,7 @@
 				                //datafield
 
 				                $post_title = $_POST['title'];
-				                $post_timeframe = $_POST['timeframe'];
-				                $post_description = $_POST['description'];
+				                $post_caption = $_POST['caption'];
 
 			                    //change photo if uploaded         
 			                    if($_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
@@ -337,12 +331,12 @@
 			                        $newImage = $_FILES['newImage'];
 							        $originalName = $newImage['name'];
 			                        $tempName = $newImage['tmp_name'];
-								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
+								    move_uploaded_file($tempName, "img/events/$originalName");
 								    print("<br>".$originalName);
-			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
+			                        $sql = "Update Event Set title = ? , caption = ?, imagepath = ? WHERE eventID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+				                        $stmt->bind_param('sssi', $post_title, $post_caption, $originalName, $eventID);
 				                        $stmt->execute();
 				                        $result = $stmt->get_result();
 			                    	}				                        
@@ -351,17 +345,17 @@
 			                    //if no photo uloaded, keep original photo
 			                    else{
 			                    	print("photo not uploaded<br>");
-			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
+			                    	$sql = "Update Event Set title = ? , caption = ? WHERE eventID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+				                        $stmt->bind_param('ssi', $post_title, $post_caption, $eventID);
 				                        $stmt->execute();
 				                        $result = $stmt->get_result();
-			                    	}
+			                    	}		
 
 			                    }
 			                    print "<br>Changes have been saved.";	
-			                    	  echo "<script type='text/javascript'>window.location = 'edit.php?projectID=$projectID'</script>";	                                     
+			                    	echo "<script type='text/javascript'>window.location = 'edit.php?eventID=$eventID'</script>";	                                     
                     		}	
                     }
 

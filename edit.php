@@ -126,7 +126,7 @@
                         $pdfpath = $row['pdfpath'];
 
                         ?>
-                        <h2>Edit Project</h2>
+                        <h2>Edit Publication</h2>
                         <form method = "post" enctype="multipart/form-data">
                             <div class="form-group">
                               <label for="title">Title:</label>
@@ -142,10 +142,9 @@
                               <input type="text" class="form-control" id="conference" name="conference" <?php echo "value = '$conference'";?>>
                             </div> 
                             <p><a href="img/publication_pdf/<?php echo $pdfpath,'"'; ?>>Pdf File</a></p>
-
                             <p>
                                 <label>PDF of paper upload: (leave blank to keep the current pdf)</label>
-                                <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
+                                <input id="newImagePDF" type="file" name="newImagePDF" accept=".jpg, .jpeg, .png">
                             </p>  
                             <img <?php echo 'src="img/publication_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
                             <p>
@@ -164,14 +163,19 @@
 				                //go through 4 cases
 				                //1. both thumbnail and pdf are changed 2. only thumbnail changed. 3. only pdf changed 4. none changed
 			                    //change photo if uploaded         
-			                    if($_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
-			                    	print("photo uploaded");	                        
+			                    if($_FILES['newImagePDF']['error']!=UPLOAD_ERR_NO_FILE&&$_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
+			                    	print("photo and pdf uploaded");
+			                    	//move pdf to folder
+			                    	$newImagePDF = $_FILES['newImagePDF'];
+							        $originalNamePDF = $newImagePDF['name'];
+			                        $tempName = $newImagePDF['tmp_name'];
+								    move_uploaded_file($tempName, "img/publication_pdf/$originalNamePDF");	
+								    //move image to folder                        
 			                        $newImage = $_FILES['newImage'];
 							        $originalName = $newImage['name'];
 			                        $tempName = $newImage['tmp_name'];
-								    move_uploaded_file($tempName, "img/project_thumbnails/$originalName");
-								    print("<br>".$originalName);
-			                        $sql = "Update Project Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
+								    move_uploaded_file($tempName, "img/publication_thumbnails/$originalName");								
+			                        $sql = "Update  Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
 				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
@@ -300,7 +304,7 @@
                         $caption = $row['caption'];
                         $imagepath = $row['imagepath'];
                         ?>
-                        <h2>Edit Project</h2>
+                        <h2>Edit Event</h2>
                         <form method = "post" enctype="multipart/form-data">
                             <div class="form-group">
                               <label for="title">Title:</label>

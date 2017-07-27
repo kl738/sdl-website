@@ -144,7 +144,7 @@
                             <p><a href="img/publication_pdf/<?php echo $pdfpath,'"'; ?>>Pdf File</a></p>
                             <p>
                                 <label>PDF of paper upload: (leave blank to keep the current pdf)</label>
-                                <input id="newImagePDF" type="file" name="newImagePDF" accept=".jpg, .jpeg, .png">
+                                <input id="newImagePDF" type="file" name="newImagePDF" accept=".pdf">
                             </p>  
                             <img <?php echo 'src="img/publication_thumbnails/',$imagepath,'"';?> alt="" class="img-responsive"></img><br>
                             <p>
@@ -162,7 +162,8 @@
 				                $post_conference = $_POST['conference'];
 				                //go through 4 cases
 				                //1. both thumbnail and pdf are changed 2. only thumbnail changed. 3. only pdf changed 4. none changed
-			                    //change photo if uploaded         
+
+			                    //change pdf and photo if both uploaded         
 			                    if($_FILES['newImagePDF']['error']!=UPLOAD_ERR_NO_FILE&&$_FILES['newImage']['error']!=UPLOAD_ERR_NO_FILE){	
 			                    	print("photo and pdf uploaded");
 			                    	//move pdf to folder
@@ -175,10 +176,10 @@
 							        $originalName = $newImage['name'];
 			                        $tempName = $newImage['tmp_name'];
 								    move_uploaded_file($tempName, "img/publication_thumbnails/$originalName");								
-			                        $sql = "Update  Set title = ? , timeframe = ?, description = ?,  imagepath = ? WHERE projectID = ? ";
+			                        $sql = "Update Publication Set title = ? , authors = ?, conference = ?,  imagepath = ?, pdfpath = ? WHERE publicationID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-				                        $stmt->bind_param('ssssi', $post_title, $post_timeframe, $post_description, $originalName, $projectID);
+				                        $stmt->bind_param('sssssi', $post_title, $post_authors, $post_authors, $originalName, $originalNamePDF, $publicationID);
 				                        $stmt->execute();
 				                        $result = $stmt->get_result();
 			                    	}				                        
@@ -187,17 +188,17 @@
 			                    //if no photo uloaded, keep original photo
 			                    else{
 			                    	print("photo not uploaded<br>");
-			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE projectID = ? ";
+			                    	$sql = "Update Project Set title = ? , timeframe = ?, description = ? WHERE publicationID = ? ";
 			                    	$stmt = $mysqli->stmt_init();
 			                    	if($stmt->prepare($sql)){
-				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $projectID);
+				                        $stmt->bind_param('sssi', $post_title, $post_timeframe, $post_description, $publicationID);
 				                        $stmt->execute();
 				                        $result = $stmt->get_result();
 			                    	}
 
 			                    }
 			                    print "<br>Changes have been saved.";	
-			                    	  echo "<script type='text/javascript'>window.location = 'edit.php?publicationID=$publicationID'</script>";	                                     
+			                   	//echo "<script type='text/javascript'>window.location = 'edit.php?publicationID=$publicationID'</script>";	                                     
                     		}	
                     }
 

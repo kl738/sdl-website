@@ -82,9 +82,10 @@
             else{
                 if($login)
                     echo "$username, you have logged in successfully!";           
-                else
+                else{
                     print "Invalid username or passward! "; 
                     print '<a href="login.php">Try again.</a>'; 
+                }
             }
             ?>
         </div>

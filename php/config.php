@@ -2,6 +2,7 @@
 // ** MySQL connection settings ** //
 
 //Keep this as localhost for the course server and for local server with MAMP
+//second line is connecting to the clearDB server
 //define('DB_HOST', "localhost");
 define('DB_HOST', "us-cdbr-iron-east-05.cleardb.net");
 

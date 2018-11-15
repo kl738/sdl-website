@@ -28,8 +28,9 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     </head>
     <body>
-        <?php 
-            require_once 'php/config.php'; 
+      HALLO
+        <?php
+            require_once 'php/config.php';
             $mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
             $activePage = "members";
             include 'php/nav.php';
@@ -49,27 +50,27 @@
                             <div class="form-group">
                               <label for="position">Position:</label>
                               <input type="text" class="form-control" id="position" name="position">
-                            </div>         
+                            </div>
                             <div class="form-group">
                               <label for="department">Department:</label>
                               <input type="text" class="form-control" id="department" name="department">
-                            </div> 
+                            </div>
                             <div class="form-group">
                               <label for="description">Description:</label>
                               <input type="text" class="form-control" id="description" name="description">
-                            </div> 
+                            </div>
                             <div class="form-group">
                               <label for="email">Email:</label>
                               <input type="text" class="form-control" id="email" name="email">
-                            </div> 
+                            </div>
                             <div class="form-group">
                               <label for="website">Website:</label>
                               <input type="text" class="form-control" id="website" name="website">
-                            </div> 
+                            </div>
                             <p>
                                 <label>Portrait Image upload: </label>
                                 <input id="newImage" type="file" name="newImage" accept=".jpg, .jpeg, .png">
-                            </p>  
+                            </p>
                             <input type="submit" name = 'submit' value="Submit">
                         </form>
                         <br>   <?php
@@ -103,7 +104,7 @@
                     }
                 ?>
                 <h2>Current Members</h2>
-                <?php 
+                <?php
                     $sql = 'SELECT * FROM Member';
                     $result = $mysqli->query($sql);
                     while ($row = $result->fetch_assoc()) {
@@ -129,7 +130,7 @@
                                   echo '<p><a href="edit.php?memberID=',$memberID,'">Edit</a> | <a href="delete.php?memberID=',$memberID,'">Delete</a></p>';
                                 }
                             echo '</div>';
-                        echo '</div>';    
+                        echo '</div>';
                     }
                 ?>
                 <!-- <div class="row row-buffer bottom-dotted-divider">
@@ -166,8 +167,8 @@
                         <h5 class="text-center">Department of Computer Science</h5>
                         <p>Rediet Abebe is a Computer Science PhD student at Cornell University, advised by Professor Jon Kleinberg. Her research focuses on algorithms, computational social science, and applications to social good. She is interested in using techniques and insights from theoretical computer science and data science to better understand and implement interventions for problems related to socioeconomic inequality and opinion dynamics. She has organized several activities aimed at promoting research in these topics, including co-chairing the <a href="http://md4sg.com/">First Workshop on Mechanism Design for Social Good</a> at the ACM Conference on Economics and Computation. She is a recipient of the Facebook Emerging Scholars Program (2017) and Google Generation Scholarship (2016). She has interned in the Microsoft Research-New England and New York City labs in the theory and computational social science groups. Prior to Cornell, she completed an M.S. in Applied Mathematics from Harvard University, an M.A. in Mathematics from the University of Cambridge, and a B.A. in Mathematics from Harvard University. She was born and raised in Addis Ababa, Ethiopia.</p>
                         <p><a href="rediettes@gmail.com">Email</a> | <a href="http://www.cs.cornell.edu/~red/">Website</a></p>
-                    </div>                    
-                </div>              
+                    </div>
+                </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="" alt="" class="img-thumbnail img-member">
@@ -178,8 +179,8 @@
                         <h5 class="text-center">Department of Sociology</h5>
                         <p>Tom is a fourth-year PhD student in the Department of Sociology. He is interested in using social network analysis and natural language processing to study the dynamics of social and cultural systems over time. His dissertation uses computational methods to study millions of interactions between political parties, social movements, and their supporters on social media. His work has been published in Social Forces, ICWSM, and the ACL. You can find more information on his <a href="t-davidson.github.io">website</a> and follow him on Twitter @thomasrdavidson.</p>
                         <p><a href="trd54@cornell.edu">Email</a> | <a href="t-davidson.github.io">Website</a></p>
-                    </div>                    
-                </div>              
+                    </div>
+                </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/fernando.jpg" alt="" class="img-thumbnail img-member">
@@ -190,8 +191,8 @@
                         <h5 class="text-center">Department of City and Regional Planning</h5>
                         <p>I am Fernando Plascencia, PhD. Candidate in Regional Science at the Department of City and Regional Planning. My interest are Behavioral Economics and Social Networks. My current research topics are based on social computing research to study complex social interactions and behavioral responses to crises, particularly to violence produced by Armed Conflicts, exploring experimental measures of subjective well-being to track national well-being in locations affected by violence, in addition, to use experimental approaches to measure risk perception and policy preferences.</p>
                         <p><a href="jp975@cornell.edu">Email</a> | <a href="http://www.fernandoplascencia.net/about">Website</a> | <a href="https://github.com/ferplascencia">Github</a></p>
-                    </div>                    
-                </div>         
+                    </div>
+                </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/alexander.png" alt="" class="img-thumbnail img-member">
@@ -204,7 +205,7 @@
                         <p>Alexander's current research interests relate to the role of social identity in political polarization, how activism and industry mobilization have shaped the adoption of policies favoring genetic engineering, and co-review networks among contentious science products. Alexander has previously published research on morality's role in corruption disputes as well as new opportunities for studying emotion management. He has also presented work on risk perceptions' and reputations' relationships with individuals' decisions to eat genetically engineered foods, identities' effects on biasing moral judgments, farmers' markets influence on communities' diets over time, and online educational materials' abilities to help daycare workers learn about children's nutritional needs.
                         </p>
                         <p><a href="amr442@cornell.edu">Email</a> | <a href="alexruch.weebly.com">Website</a></p>
-                    </div> 
+                    </div>
                 </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
@@ -217,8 +218,8 @@
                         <p>Hey! I’m a PhD student in social psychology, with a minor in information science. I’m interested in the many varieties of false beliefs that we often come to have. Why is it for example that some people believe the earth is flat, that President Obama was not born in the US, or “bad things happen in threes”? In seeking answers to these questions, I draw from research on biases & heuristics, motivated reasoning, social influence, and social networks mainly in the fields of psychology, sociology. I primarily use in-lab and online experiments, in terms of methods. I am also passionate about the burgeoning field of computational social science, and aim to increasingly incorporate in my research computational models, analyses from large-scale datasets, and experiments in real world digital environments (e.g. Twitter). As a result, I have also worked on research with organizations like Nokia Bell Labs. My research is supported by Cornell’s Sage Fellowship and the Department of the Defense.
                         </p>
                         <p><a href="sebastian.deri@gmail.com">Email</a></p>
-                    </div>                    
-                </div> 
+                    </div>
+                </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="chris.png" alt="" class="img-thumbnail img-member">
@@ -230,8 +231,8 @@
                         <p>Academic Interests: Economic Sociology, Social Simulation, Processes on Networks
                         </p>
                         <p><a href="cjc73@cornell.edu">Email</a> </a></p>
-                    </div>                    
-                </div> 
+                    </div>
+                </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="george.png" alt="" class="img-thumbnail img-member">
@@ -243,8 +244,8 @@
                         <p>Academic Interests: Computational Sociology, Social Networks, Online Interaction, Social Norms
                         </p>
                         <p><a href="geb97@cornell.edu">Email</a></p>
-                    </div>                    
-                </div> 
+                    </div>
+                </div>
                 <div class="row row-buffer bottom-dotted-divider">
                     <div class="col-sm-4">
                         <img src="img/members/jialu.jpg" alt="" class="img-thumbnail img-member">
@@ -253,11 +254,11 @@
                         <h3 class="text-center">Jialu Bao</h3>
                         <h4 class="text-center">Undergraduate Student</h4>
                         <h5 class="text-center">Department of Mathematics; Department of Information Science</h5>
-                        <p>I am a junior majoring in Mathematics and Information Science in the College of Art and Sciences. I currently work on the Homophily project under the supervision by Chris Cameron and George Berry. Besides that, I am interested in fake news detection and the spread of fake news. When I am working on academics, I like reading and taking photos, and I post photos on <a href="http://www.baojialu.com">my website</a>. 
+                        <p>I am a junior majoring in Mathematics and Information Science in the College of Art and Sciences. I currently work on the Homophily project under the supervision by Chris Cameron and George Berry. Besides that, I am interested in fake news detection and the spread of fake news. When I am working on academics, I like reading and taking photos, and I post photos on <a href="http://www.baojialu.com">my website</a>.
                         </p>
                         <p><a href="jb965@cornell.edu">Email</a> | <a href="http://www.baojialu.com">Website</a></p>
-                    </div>                    
-                </div>                          -->   
+                    </div>
+                </div>                          -->
                 <!-- <div class="row row-buffer">
                     <div class="col-sm-4">
                         <img src="img/members/" alt="" class="img-thumbnail img-member">
@@ -269,10 +270,10 @@
                         <p>
                         </p>
                         <p><a href="">Email</a> | <a href="">Website</a></p>
-                    </div>                    
-                </div>             --> 
+                    </div>
+                </div>             -->
                 <!-- <h2>Past Members</h2> -->
-     
+
             </div>
         </section>
 

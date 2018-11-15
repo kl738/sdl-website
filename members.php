@@ -38,7 +38,6 @@
         ?>
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
-                HALLO
                 <?php
                     if(isset($_SESSION['user'])){?>
                         <h2>Add Member</h2>

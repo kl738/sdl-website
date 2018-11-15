@@ -28,7 +28,6 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     </head>
     <body>
-      HALLO
         <?php
             require_once 'php/config.php';
             $mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
@@ -39,6 +38,7 @@
         ?>
         <section id="papers" class="section--no-padding background-white ">
             <div class="container">
+                HALLO
                 <?php
                     if(isset($_SESSION['user'])){?>
                         <h2>Add Member</h2>
